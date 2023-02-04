@@ -7,7 +7,10 @@ module.exports = {
         {
             files: ["*.ts", "*.js", "*.svelte"],
             parserOptions: {
-                project: ["libs/svelte-components/tsconfig.*?.json"],
+                project: [
+                    "libs/svelte-components/tsconfig.*?.json",
+                    "libs/svelte-components/.storybook/tsconfig.json",
+                ],
             },
             rules: {},
         },

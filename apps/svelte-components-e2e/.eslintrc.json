@@ -4,6 +4,9 @@
     "overrides": [
         {
             "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+            "parserOptions": {
+                "project": "apps/svelte-components-e2e/tsconfig.json"
+            },
             "rules": {}
         }
     ]
