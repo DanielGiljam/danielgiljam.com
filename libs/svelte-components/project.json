@@ -1,0 +1,31 @@
+{
+    "name": "svelte-components",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "libs/svelte-components/src",
+    "projectType": "library",
+    "tags": [],
+    "targets": {
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "outputs": ["{options.outputFile}"],
+            "options": {
+                "lintFilePatterns": [
+                    "libs/svelte-components/**/*.{ts,svelte,spec.ts}"
+                ]
+            }
+        },
+        "check": {
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "svelte-check",
+                "cwd": "libs/svelte-components"
+            }
+        },
+        "test": {
+            "executor": "@nxext/vitest:vitest",
+            "options": {
+                "vitestConfig": "libs/svelte-components/vitest.config.ts"
+            }
+        }
+    }
+}

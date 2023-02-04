@@ -14,7 +14,11 @@
         "skipLibCheck": true,
         "skipDefaultLibCheck": true,
         "baseUrl": ".",
-        "paths": {}
+        "paths": {
+            "@danielgiljam/svelte-components": [
+                "libs/svelte-components/src/index.ts"
+            ]
+        }
     },
     "exclude": ["node_modules", "tmp"]
 }
