@@ -26,6 +26,39 @@
             "options": {
                 "vitestConfig": "libs/svelte-components/vitest.config.ts"
             }
+        },
+        "storybook": {
+            "executor": "@nrwl/storybook:storybook",
+            "options": {
+                "uiFramework": "@storybook/svelte",
+                "port": 4400,
+                "config": {
+                    "configFolder": "libs/svelte-components/.storybook"
+                },
+                "projectBuildConfig": "svelte-components:build-storybook"
+            },
+            "configurations": {
+                "ci": {
+                    "quiet": true
+                }
+            }
+        },
+        "build-storybook": {
+            "executor": "@nrwl/storybook:build",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "uiFramework": "@storybook/svelte",
+                "outputPath": "dist/storybook/svelte-components",
+                "config": {
+                    "configFolder": "libs/svelte-components/.storybook"
+                },
+                "projectBuildConfig": "svelte-components:build-storybook"
+            },
+            "configurations": {
+                "ci": {
+                    "quiet": true
+                }
+            }
         }
     }
 }
