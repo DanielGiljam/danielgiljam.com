@@ -1,0 +1,87 @@
+diff --git a/components/objects/Group.svelte b/components/objects/Group.svelte
+index c06cd3e9104ed2b78874cb94e76ced98ab40ca9c..17620ada577f5463130a2280b0a49b230b3d7e3f 100644
+--- a/components/objects/Group.svelte
++++ b/components/objects/Group.svelte
+@@ -9,6 +9,10 @@
+ 	export let scale = defaults.scale;
+ 	export let renderOrder = 0;
+ 
++	export function getSelf() {
++		return self;
++	}
++
+ 	const { root, self } = setup(new THREE.Group());
+ 
+ 	$: {
+diff --git a/components/objects/Group.svelte.d.ts b/components/objects/Group.svelte.d.ts
+index fb6dc8238780d771ae02b567d310ee09330313b0..161d0e9138619c4e32c1e7139e7b233a75fa1dc1 100644
+--- a/components/objects/Group.svelte.d.ts
++++ b/components/objects/Group.svelte.d.ts
+@@ -6,15 +6,18 @@ export default class Group extends SvelteComponentTyped<{
+     scale?: import("../../types/common.js").Scale;
+     rotation?: import("../../types/common.js").Rotation;
+     renderOrder?: number;
++    getSelf?: () => THREE.Group;
+ }, {
+     [evt: string]: CustomEvent<any>;
+ }, {
+     default: {};
+ }> {
++    get getSelf(): () => THREE.Group;
+ }
+ export type GroupProps = typeof __propDef.props;
+ export type GroupEvents = typeof __propDef.events;
+ export type GroupSlots = typeof __propDef.slots;
++import * as THREE from "three";
+ import { SvelteComponentTyped } from "svelte";
+ declare const __propDef: {
+     props: {
+@@ -22,6 +25,7 @@ declare const __propDef: {
+         scale?: import("../../types/common.js").Scale;
+         rotation?: import("../../types/common.js").Rotation;
+         renderOrder?: number;
++        getSelf?: () => THREE.Group;
+     };
+     events: {
+         [evt: string]: CustomEvent<any>;
+diff --git a/components/objects/Mesh.svelte b/components/objects/Mesh.svelte
+index 27ef9bd321e8073a4e1a9afe1fbbf4865bf6a641..7824a43f5d6f9fd0f45cd426bc13d76575604643 100644
+--- a/components/objects/Mesh.svelte
++++ b/components/objects/Mesh.svelte
+@@ -16,6 +16,10 @@
+ 	export let frustumCulled = true;
+ 	export let renderOrder = 0;
+ 
++	export function getSelf() {
++		return self;
++	}
++
+ 	// TODO morphTargetInfluences, morphTargetDictionary, raycast
+ 
+ 	const { root, self } = setup(new THREE.Mesh(geometry, material));
+diff --git a/components/objects/Mesh.svelte.d.ts b/components/objects/Mesh.svelte.d.ts
+index 83cc23f94d48c94c4fec55ec3c7df04b4c38791a..cc4e86e41f0ca4bf0410932a604c1c9f4da0d254 100644
+--- a/components/objects/Mesh.svelte.d.ts
++++ b/components/objects/Mesh.svelte.d.ts
+@@ -11,11 +11,13 @@ export default class Mesh extends SvelteComponentTyped<{
+     castShadow?: boolean;
+     receiveShadow?: boolean;
+     frustumCulled?: boolean;
++    getSelf?: () => THREE.Mesh;
+ }, {
+     [evt: string]: CustomEvent<any>;
+ }, {
+     default: {};
+ }> {
++    get getSelf(): () => THREE.Mesh;
+ }
+ export type MeshProps = typeof __propDef.props;
+ export type MeshEvents = typeof __propDef.events;
+@@ -33,6 +35,7 @@ declare const __propDef: {
+         castShadow?: boolean;
+         receiveShadow?: boolean;
+         frustumCulled?: boolean;
++        getSelf?: () => THREE.Mesh;
+     };
+     events: {
+         [evt: string]: CustomEvent<any>;

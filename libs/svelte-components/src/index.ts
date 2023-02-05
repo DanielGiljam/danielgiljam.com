@@ -1,1 +1,2 @@
-export {default as Test} from "./components/test/Test.svelte";
+export * from "./ExtrudeSVG";
+export * from "./Logo3D";
