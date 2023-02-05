@@ -16,6 +16,13 @@ module.exports = {
         }
 
         // add your own webpack tweaks if needed
+        const svelteLoader = config.module.rules.find(
+            (rule) => rule.loader && rule.loader.includes("svelte-loader"),
+        );
+        svelteLoader.options = {
+            ...svelteLoader.options,
+            ...require("../svelte.config.cjs"),
+        };
 
         return config;
     },
