@@ -16,7 +16,7 @@
             "outputs": ["{options.outputFile}"],
             "options": {
                 "lintFilePatterns": [
-                    "libs/svelte-components/**/*.{ts,svelte,spec.ts}"
+                    "libs/svelte-components/**/*.{ts,js,svelte}"
                 ]
             }
         },

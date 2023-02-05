@@ -5,7 +5,7 @@ module.exports = {
     ignorePatterns: ["!**/*", "vitest.config.ts"],
     overrides: [
         {
-            files: ["*.ts", "*.js", "*.svelte"],
+            files: ["*.ts", "*.svelte"],
             parserOptions: {
                 project: [
                     "libs/svelte-components/tsconfig.*?.json",
