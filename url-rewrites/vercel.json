@@ -1,0 +1,11 @@
+// prettier-ignore
+{
+    "rewrites": [
+        {"source": "/dice-10-000/", "destination": "https://dice-10-000-danielgiljam.vercel.app/"},
+        {"source": "/dice-10-000/:match*", "destination": "https://dice-10-000-danielgiljam.vercel.app/:match*"},
+        {"source": "/offline-full-text-search-in-web-app/demo-note-taking-app/", "destination": "https://offline-full-text-search-in-web-app-danielgiljam.vercel.app/"},
+        {"source": "/offline-full-text-search-in-web-app/demo-note-taking-app/:match*", "destination": "https://offline-full-text-search-in-web-app-danielgiljam.vercel.app/:match*"},
+        {"source": "/", "destination": "https://danielgiljam.vercel.com/"},
+        {"source": "/:match*", "destination": "https://danielgiljam.vercel.com/:match*"}
+    ]
+}
