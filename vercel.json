@@ -1,0 +1,4 @@
+{
+    "buildCommand": "nx build nextjs-app",
+    "outputDirectory": "dist/apps/nextjs-app/.next"
+}
