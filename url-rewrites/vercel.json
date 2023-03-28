@@ -1,4 +1,5 @@
 {
+    "framework": null,
     "rewrites": [
         {
             "source": "/dice-10-000/",
