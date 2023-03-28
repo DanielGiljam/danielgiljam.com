@@ -1,16 +1,16 @@
 import {AppProps} from "next/app";
 import Head from "next/head";
-import "./styles.css";
+
+import "../styles/globals.css";
 
 const CustomApp = ({Component, pageProps}: AppProps) => {
     return (
         <>
             <Head>
-                <title>Welcome to nextjs-app!</title>
+                <title>Daniel Giljam</title>
+                <link href={"/icon.svg"} rel={"icon"} />
             </Head>
-            <main className={"app"}>
-                <Component {...pageProps} />
-            </main>
+            <Component {...pageProps} />
         </>
     );
 };
