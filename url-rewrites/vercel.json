@@ -20,11 +20,11 @@
         },
         {
             "source": "/",
-            "destination": "https://danielgiljam.vercel.com"
+            "destination": "https://danielgiljam.vercel.app"
         },
         {
             "source": "/:match*",
-            "destination": "https://danielgiljam.vercel.com/:match*"
+            "destination": "https://danielgiljam.vercel.app/:match*"
         }
     ],
     "trailingSlash": false
