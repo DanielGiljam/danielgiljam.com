@@ -19,6 +19,14 @@
             "destination": "https://offline-full-text-search-in-web-app-danielgiljam.vercel.app/offline-full-text-search-in-web-app/demo-note-taking-app/:match*"
         },
         {
+            "source": "/fly-by-wire",
+            "destination": "https://fly-by-wire-danielgiljam.vercel.app/fly-by-wire"
+        },
+        {
+            "source": "/fly-by-wire/:match*",
+            "destination": "https://fly-by-wire-danielgiljam.vercel.app/fly-by-wire/:match*"
+        },
+        {
             "source": "/",
             "destination": "https://danielgiljam.vercel.app"
         },
