@@ -1,6 +1,18 @@
 {
     "buildCommand": null,
     "framework": null,
+    "redirects": [
+        {
+            "source": "/fly-by-wire",
+            "destination": "/degree-thesis",
+            "permanent": true
+        },
+        {
+            "source": "/fly-by-wire/:match*",
+            "destination": "/degree-thesis/:match*",
+            "permanent": true
+        }
+    ],
     "rewrites": [
         {
             "source": "/dice-10-000",
@@ -19,12 +31,12 @@
             "destination": "https://offline-full-text-search-in-web-app-danielgiljam.vercel.app/offline-full-text-search-in-web-app/demo-note-taking-app/:match*"
         },
         {
-            "source": "/fly-by-wire",
-            "destination": "https://fly-by-wire-danielgiljam.vercel.app/fly-by-wire"
+            "source": "/degree-thesis",
+            "destination": "https://degree-thesis-danielgiljam.vercel.app/degree-thesis"
         },
         {
-            "source": "/fly-by-wire/:match*",
-            "destination": "https://fly-by-wire-danielgiljam.vercel.app/fly-by-wire/:match*"
+            "source": "/degree-thesis/:match*",
+            "destination": "https://degree-thesis-danielgiljam.vercel.app/degree-thesis/:match*"
         },
         {
             "source": "/",
