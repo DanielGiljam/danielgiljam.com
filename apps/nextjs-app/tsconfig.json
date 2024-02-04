@@ -11,8 +11,19 @@
         "resolveJsonModule": true,
         "isolatedModules": true,
         "incremental": true,
-        "types": ["jest", "node"]
+        "types": ["jest", "node"],
+        "baseUrl": ".",
+        "paths": {
+            "contentlayer/generated": ["./.contentlayer/generated"]
+        }
     },
-    "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", "next-env.d.ts"],
+    "include": [
+        "**/*.ts",
+        "**/*.tsx",
+        "**/*.js",
+        "**/*.jsx",
+        "next-env.d.ts",
+        ".contentlayer/generated"
+    ],
     "exclude": ["node_modules", "jest.config.ts"]
 }
