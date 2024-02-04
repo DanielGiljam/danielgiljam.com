@@ -105,7 +105,7 @@
         "vitest": "^0.24.3",
         "vitest-preview": "latest"
     },
-    "packageManager": "pnpm@7.26.3",
+    "packageManager": "pnpm@8.15.1",
     "pnpm": {
         "patchedDependencies": {
             "svelte-cubed@0.2.1": "patches/svelte-cubed@0.2.1.patch"
