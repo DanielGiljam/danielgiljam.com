@@ -44,3 +44,6 @@ Thumbs.db
 # caches
 .eslintcache
 tsconfig.tsbuildinfo
+
+# Contentlayer
+.contentlayer
