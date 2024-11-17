@@ -1,5 +1,3 @@
-import {Icon} from "@iconify/react";
-
 import {ReactComponent as LogomarkLarge} from "../../assets/logomark.svg";
 
 export const Index = () => (
@@ -15,9 +13,8 @@ export const Index = () => (
                     rel={"noreferrer"}
                     target={"_blank"}
                 >
-                    <Icon
-                        className={"h-8 w-8"}
-                        icon={"simple-icons:linkedin"}
+                    <span
+                        className={"iconify simple-icons--linkedin h-8 w-8"}
                     />
                     <span className={"sr-only"}>LinkedIn</span>
                 </a>
@@ -26,7 +23,7 @@ export const Index = () => (
                     rel={"noreferrer"}
                     target={"_blank"}
                 >
-                    <Icon className={"h-8 w-8"} icon={"simple-icons:github"} />
+                    <span className={"iconify simple-icons--github h-8 w-8"} />
                     <span className={"sr-only"}>GitHub</span>
                 </a>
             </div>

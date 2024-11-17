@@ -1,5 +1,6 @@
 const {join} = require("path");
 
+const {addIconSelectors} = require("@iconify/tailwind");
 const {createGlobPatternsForDependencies} = require("@nrwl/react/tailwind");
 
 /** @type {import('tailwindcss').Config} */
@@ -11,5 +12,5 @@ module.exports = {
     theme: {
         extend: {},
     },
-    plugins: [],
+    plugins: [addIconSelectors(["simple-icons"])],
 };
