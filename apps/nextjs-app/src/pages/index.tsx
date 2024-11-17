@@ -14,7 +14,9 @@ export const Index = () => (
                     target={"_blank"}
                 >
                     <span
+                        aria-hidden={"true"}
                         className={"iconify simple-icons--linkedin h-8 w-8"}
+                        role={"img"}
                     />
                     <span className={"sr-only"}>LinkedIn</span>
                 </a>
@@ -23,7 +25,11 @@ export const Index = () => (
                     rel={"noreferrer"}
                     target={"_blank"}
                 >
-                    <span className={"iconify simple-icons--github h-8 w-8"} />
+                    <span
+                        aria-hidden={"true"}
+                        className={"iconify simple-icons--github h-8 w-8"}
+                        role={"img"}
+                    />
                     <span className={"sr-only"}>GitHub</span>
                 </a>
             </div>
