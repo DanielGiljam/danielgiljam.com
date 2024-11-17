@@ -1,7 +1,14 @@
+import {Roboto} from "@next/font/google";
 import {AppProps} from "next/app";
 import Head from "next/head";
 
 import "../styles/globals.css";
+
+const roboto = Roboto({
+    weight: "300",
+    subsets: ["latin"],
+    display: "swap",
+});
 
 const CustomApp = ({Component, pageProps}: AppProps) => {
     return (
@@ -10,7 +17,9 @@ const CustomApp = ({Component, pageProps}: AppProps) => {
                 <title>Daniel Giljam</title>
                 <link href={"/icon.svg"} rel={"icon"} />
             </Head>
-            <Component {...pageProps} />
+            <main className={roboto.className}>
+                <Component {...pageProps} />
+            </main>
         </>
     );
 };
