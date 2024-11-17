@@ -6,6 +6,7 @@ export const Index = () => (
             <LogomarkLarge
                 aria-hidden={"true"}
                 className={"h-full max-h-[320px] w-full max-w-[320px]"}
+                role={"img"}
             />
             <div className={"flex justify-center gap-4"}>
                 <a
