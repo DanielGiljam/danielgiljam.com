@@ -53,6 +53,25 @@ export const Index = () => (
                     </a>
                 </li>
             </ul>
+            <a
+                className={
+                    "fixed bottom-[0.5em] right-[0.5em] flex items-center gap-[0.5em] p-[0.25em] pr-0 text-end text-[min(3.6vmin,_12px)]/[1.2em] opacity-50 transition-opacity duration-200 hover:opacity-100 focus-visible:opacity-100"
+                }
+                href={"time-travel/2018/"}
+            >
+                <span className={"-mb-[0.1em]"}>
+                    Time travel
+                    <br />
+                    to 2018
+                </span>
+                <span
+                    aria-hidden={"true"}
+                    className={
+                        "iconify pepicons-pencil--rewind-time h-[min(9.6vmin,_32px)] w-[min(9.6vmin,_32px)]"
+                    }
+                    role={"img"}
+                />
+            </a>
         </div>
     </div>
 );
