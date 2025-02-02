@@ -62,7 +62,7 @@ export const Index = () => (
                 <span className={"-mb-[0.1em]"}>
                     Time travel
                     <br />
-                    to 2018
+                    back to 2018
                 </span>
                 <span
                     aria-hidden={"true"}
