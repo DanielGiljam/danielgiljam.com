@@ -47,6 +47,9 @@ importers:
       '@danielgiljam/eslint-config-typescript':
         specifier: workspace:^0.0.0
         version: link:libs/eslint-configs/typescript
+      '@iconify-json/pepicons-pencil':
+        specifier: ^1.2.1
+        version: 1.2.1
       '@iconify-json/simple-icons':
         specifier: ^1.2.11
         version: 1.2.11
@@ -1116,6 +1119,9 @@ packages:
   '@humanwhocodes/object-schema@1.2.1':
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     deprecated: Use @eslint/object-schema instead
+
+  '@iconify-json/pepicons-pencil@1.2.1':
+    resolution: {integrity: sha512-A/bZrCim6hRparREoLdBEv0yDoaseVsU2gW8qGPGF1W+KwleqhWN9V1S0gMs723HvP9eyhzOPZhWnPZtemvCYg==}
 
   '@iconify-json/simple-icons@1.2.11':
     resolution: {integrity: sha512-AHCGDtBRqP+JzAbBzgO8uN/08CXxEmuaC6lQQZ3b5burKhRU12AJnJczwbUw2K5Mb/U85EpSUNhYMG3F28b8NA==}
@@ -10341,6 +10347,10 @@ snapshots:
       - supports-color
 
   '@humanwhocodes/object-schema@1.2.1': {}
+
+  '@iconify-json/pepicons-pencil@1.2.1':
+    dependencies:
+      '@iconify/types': 2.0.0
 
   '@iconify-json/simple-icons@1.2.11':
     dependencies:

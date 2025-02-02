@@ -12,5 +12,5 @@ module.exports = {
     theme: {
         extend: {},
     },
-    plugins: [addIconSelectors(["simple-icons"])],
+    plugins: [addIconSelectors(["simple-icons", "pepicons-pencil"])],
 };
