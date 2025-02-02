@@ -4,7 +4,7 @@ export const Index = () => (
     <div className={"flex min-h-[100svh]"}>
         <div
             className={
-                "m-auto flex flex-col items-center gap-[min(3.2vmin,_32px)] overflow-hidden"
+                "m-auto flex flex-col items-center gap-[min(3.2vmin,_32px)]"
             }
         >
             <LogomarkLarge
@@ -29,7 +29,7 @@ export const Index = () => (
                         <span
                             aria-hidden={"true"}
                             className={
-                                "iconify simple-icons--linkedin h-[min(9.6vmin,_32px)] w-[min(9.6vmin,_32px)]"
+                                "iconify simple-icons--linkedin block h-[min(9.6vmin,_32px)] w-[min(9.6vmin,_32px)]"
                             }
                             role={"img"}
                         />
@@ -45,7 +45,7 @@ export const Index = () => (
                         <span
                             aria-hidden={"true"}
                             className={
-                                "iconify simple-icons--github h-[min(9.6vmin,_32px)] w-[min(9.6vmin,_32px)]"
+                                "iconify simple-icons--github block h-[min(9.6vmin,_32px)] w-[min(9.6vmin,_32px)]"
                             }
                             role={"img"}
                         />
