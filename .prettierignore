@@ -4,4 +4,4 @@
 /coverage
 .next
 pnpm-lock.yaml
-apps/nextjs-app/public/time-machine
+apps/nextjs-app/public/time-travel
