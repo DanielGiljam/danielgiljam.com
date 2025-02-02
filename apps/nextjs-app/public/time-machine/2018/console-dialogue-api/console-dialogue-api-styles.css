@@ -1,0 +1,47 @@
+/*
+Stylesheet for website "ConsoleDialogueAPI"
+Created by Daniel Giljam, 2018
+*/
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    background-color: black;
+    color: #0D6A10;
+    font-family: "Roboto", "Helvetica Neue", "Arial", sans-serif;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 96px;
+    max-width: 776px;
+}
+img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 46px;
+}
+p {
+    padding: 0 8px;
+}
+a, a:visited {
+    color: #0D6A10;
+    font-style: italic;
+}
+a:hover {
+    background-color: #0D6A10;
+    color: black;
+}
+body > a {
+    display: inline-block;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+@media (hover: none) {
+    a, a:visited {
+        color: #0D6A10;
+        font-style: italic;
+        text-decoration: underline;
+    }
+}

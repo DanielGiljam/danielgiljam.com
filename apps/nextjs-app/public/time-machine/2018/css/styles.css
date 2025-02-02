@@ -1,0 +1,93 @@
+/*
+Stylesheet for website "Daniel Giljam" @ http://people.arcada.fi/~giljamda
+Created by Daniel Giljam, 2017
+*/
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    margin: 0;
+    text-align: center;
+}
+.wrap {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+img {
+    display: block;
+    margin: 32px auto;
+    padding: 0 32px;
+    max-width: 50%;
+    height: auto;
+}
+main > div {
+    display: inline-block;
+    margin: 2px 0;
+    width: 380px;
+}
+#wd17-kursuppgift {
+    background: black url(../media-content/wd17-kursuppgift-icon-desktop.png) no-repeat center/cover;
+}
+#fed17-låneansökan {
+    background: white url(../media-content/fed17-laneansokan-icon-desktop.png) no-repeat center/cover;
+}
+#strange-soup {
+    background: black url(../media-content/noc2-strange-soup-icon-desktop.png) no-repeat center/cover;
+}
+#console-dialogue-api {
+    background: black url(../media-content/consoledialogueapi-icon-desktop.png) no-repeat center/cover;
+}
+div > a {
+    text-decoration: none;
+    font-family: "Roboto", "Helvetica Neue", "Arial", sans-serif;
+    font-size: 24px;
+    display: inline-block;
+    width: 100%;
+    padding: 140px 0;
+    opacity: 0;
+}
+div > a:hover {
+    opacity: 1;
+}
+.dark-bg {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.light-bg {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+#cgi {
+    width: 760px;
+    margin-top: 16px;
+    font-family: "Roboto", "Helvetica Neue", "Arial", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: italic;
+}
+#cgi a {
+    display: inline-block;
+    padding: 2px 8px;
+    margin-top: 4px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 24px;
+}
+#cgi a:hover {
+    background-color: rgba(136, 136, 136, 0.5);
+}
+a img {
+    display: initial;
+    margin: 24px auto;
+    padding: 0;
+    width: 109px;
+}

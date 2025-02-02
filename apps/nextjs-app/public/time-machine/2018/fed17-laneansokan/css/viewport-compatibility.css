@@ -1,0 +1,90 @@
+/*
+Stylesheet for website "Låneansökan"
+Created by Daniel Giljam, 2017
+*/
+
+@media (max-width: 800px) {
+    #grid-layout {
+        width: auto;
+        padding: 0;
+        grid-template-columns: 100%;
+    }
+    form {
+        margin-top: 16px;
+        text-align: center;
+    }
+    #personuppgifter, #submit-field, #låneansökan, #bakgrundsfärg {
+        width: 80%;
+    }
+    #personuppgifter label {
+        width: 200px;
+    }
+    #triple-star {
+        width: 80%;
+        text-align: right;
+        margin-right: 4px;
+    }
+    #submit-field {
+        text-align: center;
+    }
+    #submit {
+        margin: 0;
+    }
+    #script-output {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 160px;
+        margin: 0;
+        grid-row: 3;
+    }
+    #script-output-layer {
+        overflow: auto;
+        padding: 4px 80px 20px 80px;
+    }
+    .outputs1 {
+        margin-left: 204px;
+    }
+    #links {
+        margin: 0 auto 180px auto;
+        padding-right: 4px;
+        width: 80%;
+        text-align: right;
+        font-size: 0.88em;
+        grid-row: 2;
+    }
+}
+
+@media (max-width: 550px) {
+    form label {
+        text-align: left;
+    }
+    #personuppgifter label, #låneansökan label, #bakgrundsfärg label {
+        width: 100%;
+        margin-bottom: 4px;
+    }
+    .fake-label {
+        text-align: left;
+        width: auto;
+    }
+    #script-output-layer {
+        padding: 4px 40px 20px 40px;
+    }
+    .outputs1 {
+        margin-left: 0;
+    }
+    .outputs2 {
+        margin-left: 0;
+    }
+}
+
+@media (hover: none) {
+    #author-link a, #author-link a:visited {
+        color: blue;
+    }
+    #report-link a, #reportlink a:visited {
+        color: blue;
+        font-style: italic;
+        text-decoration: underline;
+    }
+}

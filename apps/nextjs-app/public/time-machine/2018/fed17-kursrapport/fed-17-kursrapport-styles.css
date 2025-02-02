@@ -1,0 +1,104 @@
+/*
+Stylesheet for website "FED17 Kursrapport"
+Created by Daniel Giljam, 2017
+*/
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: "Roboto", "Helvetica Neue", "Arial", sans-serif;
+    text-align: center;
+    margin: 0;
+}
+#wrap {
+    display: inline-block;
+    width: auto;
+    margin: 0 auto;
+    padding: 24px;
+}
+p {
+    max-width:600px;
+    text-align: left;
+}
+img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+p a, p a:visited {
+    color: blue;
+    font-style: italic;
+    text-decoration: underline;
+}
+p a:hover {
+    background-color: blue;
+    color: white;
+}
+a, a:visited {
+    color: black;
+    text-decoration: none;
+}
+a:hover {
+    color: blue;
+}
+@media (hover: none) {
+    a, a:visited {
+        color: blue;
+        font-style: italic;
+        text-decoration: underline;
+    }
+}
+table {
+    border-collapse: collapse;
+    min-width: 650px;
+}
+th {
+    font-weight: 500;
+}
+th span {
+    font-size: 0.75em;
+    font-style: italic;
+}
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    vertical-align: top;
+    padding: 8px;
+    width: 120px;
+}
+th:first-child, td:first-child {
+    width: 130px;
+}
+th:nth-child(3), td:nth-child(3) {
+    width: 150px;
+}
+th:last-child, td:last-child {
+    width: 480px;
+}
+tr:nth-child(odd) {
+    background-color: #efefef;
+}
+ul {
+    margin: 0;
+    padding-left: 1.2em;
+}
+#name-and-link {
+    font-family: "Helvetica Neue", "Roboto", sans-serif;
+    text-align: right;
+    max-width: 100%;
+}
+#name-and-link a {
+    font-family: "Avenir Next", "Roboto", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+}
+@media (hover: none) {
+    #name-and-link a {
+        font-style: normal;
+        text-decoration: none;
+    }
+}
