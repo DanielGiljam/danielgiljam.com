@@ -1,0 +1,27 @@
+@reference '../app/globals.css';
+
+.nav {
+  --when-logo-crosses-top-of-screen: calc(
+    var(--header-height) +
+      ((var(--landing-page-hero-height) - var(--logo-lockup-height)) / 2)
+  );
+  --range-start: calc(
+    var(--when-logo-crosses-top-of-screen) - (var(--header-height) * 1.5)
+  );
+  --range-end: calc(var(--range-start) + var(--header-height));
+
+  @supports (animation-range: var(--range-start) var(--range-end)) {
+    animation: nav-backdrop-blur linear forwards;
+    animation-timeline: scroll();
+    animation-range: var(--range-start) var(--range-end);
+  }
+}
+
+@keyframes nav-backdrop-blur {
+  from {
+    backdrop-filter: blur(0);
+  }
+  to {
+    backdrop-filter: blur(theme(blur.md));
+  }
+}

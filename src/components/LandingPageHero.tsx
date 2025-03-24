@@ -4,19 +4,23 @@ import { Logo } from "./Logo";
 export const LandingPageHero = () => {
   return (
     <section
-      className={"relative flex min-h-[60vh] items-center justify-center"}
+      className={
+        "relative flex h-(--landing-page-hero-height) items-center justify-center"
+      }
     >
       <div
-        className={"z-10 flex flex-col items-center gap-[min(3.2vmin,_32px)]"}
+        className={
+          "z-10 mt-15 flex flex-col items-center gap-(--logo-lockup-gap-size) lg:mt-13"
+        }
       >
         <Logo
           variant={"large"}
           aria-hidden={"true"}
-          className={"h-[min(32vmin,_320px)] w-[min(32vmin,_320px)]"}
+          className={"h-(--logo-lockup-logo-size) w-(--logo-lockup-logo-size)"}
         />
         <h1
           className={
-            "relative end-[-0.1em] text-center font-(family-name:--font-roboto) text-[min(6vmin,_48px)] font-light tracking-[0.2em] text-nowrap uppercase"
+            "relative end-[-0.1em] text-center font-(family-name:--font-roboto) text-(length:--logo-lockup-text-size) leading-none font-light tracking-[0.2em] text-nowrap uppercase"
           }
         >
           Daniel Giljam

@@ -1,3 +1,5 @@
+import { cn } from "@/cn";
+import styles from "./Header.module.css";
 import { Logo } from "./Logo";
 
 const navItems = [
@@ -10,8 +12,13 @@ const navItems = [
  */
 export const Header = () => {
   return (
-    <header>
-      <nav className="border-gray-200 bg-white px-4 py-2.5 lg:px-6 dark:bg-gray-800">
+    <header className="sticky inset-0 z-20 -mb-(--header-height)">
+      <nav
+        className={cn(
+          "h-(--header-height) bg-gradient-to-b from-black to-transparent px-4 py-2.5 lg:px-6",
+          styles.nav,
+        )}
+      >
         <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between">
           <a href="/" className="flex items-center">
             <Logo
