@@ -2,7 +2,7 @@ import Link from "next/link";
 import { compareDesc, format, parseISO } from "date-fns";
 import { allPosts, Post } from "contentlayer/generated";
 
-import { LandingPage } from "@/components/LandingPage";
+import { LandingPageHero } from "@/components/LandingPageHero";
 
 function PostCard(post: Post) {
   return (
@@ -33,7 +33,7 @@ export default function Home() {
 
   return (
     <>
-      <LandingPage />
+      <LandingPageHero />
       <div className="mx-auto max-w-xl py-8">
         <h1 className="mb-8 text-center text-2xl font-black">
           Next.js + Contentlayer Example

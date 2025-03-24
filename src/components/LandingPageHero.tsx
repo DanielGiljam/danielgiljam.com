@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Logo } from "./Logo";
 
-export const LandingPage = () => {
+export const LandingPageHero = () => {
   return (
     <section
       className={"relative flex min-h-[60vh] items-center justify-center"}
