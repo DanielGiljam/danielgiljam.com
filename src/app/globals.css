@@ -3,6 +3,18 @@
 :root {
   --background: #ffffff;
   --foreground: #000000;
+
+  --header-height: --spacing(15);
+
+  --landing-page-hero-height: 75vh;
+
+  --logo-lockup-logo-size: min(32vmin, 320px);
+  --logo-lockup-gap-size: min(6vmin, 48px);
+  --logo-lockup-text-size: min(6vmin, 48px);
+  --logo-lockup-height: calc(
+    var(--logo-lockup-logo-size) + var(--logo-lockup-gap-size) +
+      var(--logo-lockup-text-size)
+  );
 }
 
 @theme inline {
@@ -16,6 +28,12 @@
   :root {
     --background: #000000;
     --foreground: #ffffff;
+  }
+}
+
+@media (width >= theme(breakpoint.lg)) {
+  :root {
+    --header-height: --spacing(13);
   }
 }
 
