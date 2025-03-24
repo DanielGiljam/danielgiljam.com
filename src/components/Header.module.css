@@ -15,6 +15,14 @@
     animation-timeline: scroll();
     animation-range: var(--range-start) var(--range-end);
   }
+
+  & .homeLink {
+    @supports (animation-range: var(--range-start) var(--range-end)) {
+      animation: home-link-reveal linear forwards;
+      animation-timeline: scroll();
+      animation-range: var(--range-start) var(--range-end);
+    }
+  }
 }
 
 @keyframes nav-backdrop-blur {
@@ -23,5 +31,16 @@
   }
   to {
     backdrop-filter: blur(theme(blur.md));
+  }
+}
+
+@keyframes home-link-reveal {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 100%;
+    visibility: visible;
   }
 }

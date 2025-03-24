@@ -20,7 +20,13 @@ export const Header = () => {
         )}
       >
         <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between">
-          <a href="/" className="flex items-center">
+          <a
+            href="/"
+            className={cn(
+              "invisible flex items-center opacity-0",
+              styles.homeLink,
+            )}
+          >
             <Logo
               className="h-8"
               variant="medium_modified"
