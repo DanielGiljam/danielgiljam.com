@@ -2,6 +2,20 @@ import Link from "next/link";
 
 import { Logo } from "@/components/Logo";
 
+const bottomLinks = [
+  {
+    label: "Credits & attributions",
+    href: "/credits",
+  },
+  {
+    label: "Source code",
+    title: "This website's source code on GitHub",
+    href: "https://github.com/danielgiljam/danielgiljam.com",
+    target: "_blank",
+    rel: "noreferrer",
+  },
+];
+
 /**
  * Based on https://flowbite.com/blocks/e-commerce/mega-footers/#default-mega-footer.
  */
@@ -515,22 +529,13 @@ export const Footer = () => {
             </a>
 
             <ul className="flex flex-wrap items-center gap-4 text-sm text-gray-900 xl:justify-center dark:text-white">
-              <li>
-                <Link href="/credits" className="font-medium hover:underline">
-                  Credits & attributions
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://github.com/danielgiljam/danielgiljam.com"
-                  rel="noreferrer"
-                  target="_blank"
-                  title="This website's source code on GitHub"
-                  className="font-medium hover:underline"
-                >
-                  Source code
-                </Link>
-              </li>
+              {bottomLinks.map(({ label, ...props }) => (
+                <li key={label}>
+                  <Link {...props} className="font-medium hover:underline">
+                    {label}
+                  </Link>
+                </li>
+              ))}
             </ul>
 
             <p className="text-sm text-gray-500 dark:text-gray-400">
