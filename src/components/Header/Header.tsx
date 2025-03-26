@@ -33,11 +33,7 @@ const externalNavItems = [
 const internalNavItems = [
   {
     label: "Blog",
-    href: "#",
-  },
-  {
-    label: "About",
-    href: "#",
+    href: "/blog",
   },
 ];
 
