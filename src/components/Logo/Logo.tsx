@@ -70,12 +70,15 @@ const variants = {
     </svg>
   ),
 } satisfies {
-  [key: string]: (props: React.SVGProps<SVGSVGElement>) => React.JSX.Element;
+  [key: string]: (props: React.ComponentProps<"svg">) => React.JSX.Element;
 };
 
 export const Logo = ({
-  variant = "medium",
-  ...props
-}: React.SVGProps<SVGSVGElement> & { variant?: keyof typeof variants }) => {
-  return variants[variant](props);
+  className,
+  variant,
+}: {
+  className?: string;
+  variant: keyof typeof variants;
+}) => {
+  return variants[variant]({ className, "aria-hidden": "true" });
 };
