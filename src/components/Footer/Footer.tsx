@@ -165,9 +165,9 @@ export const Footer = () => {
       <div className="mx-auto max-w-screen-xl">
         <div className="border-b border-gray-100 py-6 md:py-8 lg:py-16 dark:border-gray-700">
           <div className="items-start gap-6 md:gap-8 lg:flex 2xl:gap-24">
-            <div className="grid min-w-0 flex-1 grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 xl:grid-cols-3">
+            <div className="mt-6 min-w-0 flex-1 md:columns-2 md:gap-8 lg:mt-0 lg:-mb-12 xl:columns-3">
               {links.map(({ heading, links }) => (
-                <div key={heading}>
+                <div key={heading} className="mb-12">
                   <h6 className="mb-4 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                     {heading}
                   </h6>
