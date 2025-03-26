@@ -2,6 +2,146 @@ import Link from "next/link";
 
 import { Logo } from "@/components/Logo";
 
+const InlineCode = ({ children }: { children: React.ReactNode }) => (
+  <code className="rounded-sm bg-gray-200/50 px-1.5 py-0.5 text-[smaller] hover:bg-gray-200 dark:bg-gray-700/50 dark:hover:bg-gray-700">
+    {children}
+  </code>
+);
+
+const links = [
+  {
+    heading: "Degree thesis",
+    links: [
+      {
+        label: "Web edition",
+        href: "/degree-thesis",
+      },
+      {
+        label: "Print edition",
+        href: "https://www.theseus.fi/handle/10024/800032",
+        target: "_blank",
+        rel: "noreferrer",
+      },
+      {
+        icon: (
+          <span
+            className={"icon-[simple-icons--github] relative -bottom-[0.2em]"}
+            aria-hidden={"true"}
+          />
+        ),
+        label: <InlineCode>tanstack-query-with-orbitjs</InlineCode>,
+        href: "https://github.com/DanielGiljam/tanstack-query-with-orbitjs#readme",
+        target: "_blank",
+        rel: "noreferrer",
+      },
+      {
+        icon: (
+          <span
+            className={"icon-[simple-icons--npm] relative -bottom-[0.2em]"}
+            aria-hidden={"true"}
+          />
+        ),
+        label: <InlineCode>@tanstack-query-with-orbitjs/core</InlineCode>,
+        href: "https://www.npmjs.com/package/@tanstack-query-with-orbitjs/core",
+        target: "_blank",
+        rel: "noreferrer",
+      },
+      {
+        icon: (
+          <span
+            className={"icon-[simple-icons--npm] relative -bottom-[0.2em]"}
+            aria-hidden={"true"}
+          />
+        ),
+        label: <InlineCode>@tanstack-query-with-orbitjs/react</InlineCode>,
+        href: "https://www.npmjs.com/package/@tanstack-query-with-orbitjs/react",
+        target: "_blank",
+        rel: "noreferrer",
+      },
+    ],
+  },
+  {
+    heading: "Offline full-text search in web app",
+    links: [
+      {
+        label: "Demo note taking app",
+        href: "/offline-full-text-search-in-web-app/demo-note-taking-app",
+      },
+    ],
+  },
+  {
+    heading: "Orbit utils",
+    links: [
+      {
+        icon: (
+          <span
+            className={"icon-[simple-icons--github] relative -bottom-[0.2em]"}
+            aria-hidden={"true"}
+          />
+        ),
+        label: <InlineCode>orbit-utils</InlineCode>,
+        href: "https://github.com/danielgiljam/orbit-utils#readme",
+        target: "_blank",
+        rel: "noreferrer",
+      },
+      {
+        icon: (
+          <span
+            className={"icon-[simple-icons--npm] relative -bottom-[0.2em]"}
+            aria-hidden={"true"}
+          />
+        ),
+        label: <InlineCode>@orbit-utils/zod-to-model-definition</InlineCode>,
+        href: "https://www.npmjs.com/package/@orbit-utils/zod-to-model-definition",
+        target: "_blank",
+        rel: "noreferrer",
+      },
+    ],
+  },
+  {
+    heading: "Miscellaneous",
+    links: [
+      {
+        icon: (
+          <span
+            className={"icon-[simple-icons--github] relative -bottom-[0.2em]"}
+            aria-hidden={"true"}
+          />
+        ),
+        label: (
+          <InlineCode>
+            nx-supabase-payload-nextjs-shadcn-storybook-monorepo
+          </InlineCode>
+        ),
+        href: "https://github.com/DanielGiljam/nx-supabase-payload-nextjs-shadcn-storybook-monorepo#readme",
+        target: "_blank",
+        rel: "noreferrer",
+      },
+      {
+        icon: (
+          <span
+            className={"icon-[simple-icons--github] relative -bottom-[0.2em]"}
+            aria-hidden={"true"}
+          />
+        ),
+        label: <InlineCode>ai-document-outline-generator</InlineCode>,
+        href: "https://github.com/DanielGiljam/ai-document-outline-generator#readme",
+        target: "_blank",
+        rel: "noreferrer",
+      },
+    ],
+  },
+  {
+    heading: "Time travel",
+    links: [
+      {
+        label: "2018",
+        href: "/time-travel/2018",
+      },
+    ],
+  },
+];
+
 const bottomLinks = [
   {
     label: "Credits & attributions",
@@ -25,492 +165,27 @@ export const Footer = () => {
       <div className="mx-auto max-w-screen-xl">
         <div className="border-b border-gray-100 py-6 md:py-8 lg:py-16 dark:border-gray-700">
           <div className="items-start gap-6 md:gap-8 lg:flex 2xl:gap-24">
-            <div className="grid min-w-0 flex-1 grid-cols-2 gap-6 md:gap-8 xl:grid-cols-3">
-              <div>
-                <h6 className="mb-4 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                  Company
-                </h6>
-                <ul className="space-y-3">
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      {" "}
-                      About{" "}
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      {" "}
-                      Premium{" "}
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      {" "}
-                      Blog{" "}
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      {" "}
-                      Affiliate Program{" "}
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      {" "}
-                      Get Coupon{" "}
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <h6 className="mb-4 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                  Order & Purchases
-                </h6>
-                <ul className="space-y-3">
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      Order Status
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      Track Your Order
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      Purchase History
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      Returns & Refunds
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      Payment Methods
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <h6 className="mb-4 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                  Support & Services
-                </h6>
-                <ul className="space-y-3">
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      Contact Support
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      FAQs
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      Service Centers
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      Warranty Information
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      Product Manuals
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <h6 className="mb-4 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                  Partnerships
-                </h6>
-                <ul className="space-y-3">
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      Partner With Us
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      Become a Supplier
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      Affiliate Program
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      Collaboration Opportunities
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      Sponsorship Requests
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <h6 className="mb-4 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                  Payment Options
-                </h6>
-                <ul className="space-y-3">
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      Credit & Debit Cards
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      PayPal
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      Bank Transfers
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      Installment Plans
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      Gift Cards
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <h6 className="mb-4 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                  Rewards
-                </h6>
-                <ul className="space-y-3">
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      Reward Points
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      Referral Program
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      VIP Membership
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      Exclusive Offers
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      Redeem Rewards
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <h6 className="mb-4 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                  Trade Assurance
-                </h6>
-                <ul className="space-y-3">
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      What is Trade Assurance?
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      How It Works
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      Buyer Protection
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      Seller Guarantee
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      FAQs
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <h6 className="mb-4 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                  Sell on Flowbite
-                </h6>
-                <ul className="space-y-3">
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      Seller Registration
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      How to Sell
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      Seller Policies
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      Seller Resources
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      Seller Support
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <h6 className="mb-4 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                  Get Support
-                </h6>
-                <ul className="space-y-3">
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      Contact Us
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      Help Center
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      Community Forums
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      Technical Support
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      title=""
-                      className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                    >
-                      Live Chat
-                    </a>
-                  </li>
-                </ul>
-              </div>
+            <div className="grid min-w-0 flex-1 grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 xl:grid-cols-3">
+              {links.map(({ heading, links }) => (
+                <div key={heading}>
+                  <h6 className="mb-4 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                    {heading}
+                  </h6>
+                  <ul className="space-y-3">
+                    {links.map(({ icon, label, ...props }, index) => (
+                      <li key={index}>
+                        <Link
+                          {...props}
+                          className="block truncate text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
+                        >
+                          {icon}
+                          <span className="not-only:ms-2">{label}</span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
           </div>
         </div>
