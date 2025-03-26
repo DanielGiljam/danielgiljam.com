@@ -8,7 +8,7 @@
 
   --header-height: --spacing(13);
 
-  --landing-page-hero-height: 75vh;
+  --landing-page-hero-height: 100svh;
 
   --logo-lockup-logo-size: min(32vmin, 320px);
   --logo-lockup-gap-size: min(6vmin, 48px);
