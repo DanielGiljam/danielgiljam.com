@@ -1,5 +1,6 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import React from "react";
 
 import { cn } from "@/cn";
@@ -41,14 +42,15 @@ const internalNavItems = [
  * Based on https://flowbite.com/blocks/marketing/header/#default-header-navigation.
  */
 export const Header = () => {
+  const pathname = usePathname();
   const id = React.useId();
   const [open, setOpen] = React.useState(false);
   return (
     <header className="sticky inset-0 z-20">
       <nav
         className={cn(
-          "absolute w-full bg-gradient-to-b from-black to-transparent px-4 py-2.5 not-data-open:h-(--header-height) lg:h-(--header-height) lg:px-6",
-          styles.nav,
+          "absolute w-full bg-gradient-to-b from-black to-transparent px-4 py-2.5 backdrop-blur-md not-data-open:h-(--header-height) lg:h-(--header-height) lg:px-6",
+          pathname === "/" && styles.nav,
         )}
         data-open={open || undefined}
       >
@@ -56,7 +58,10 @@ export const Header = () => {
           <div className="flex-grow">
             <a
               href="/"
-              className={cn("flex w-fit items-center", styles.homeLink)}
+              className={cn(
+                "flex w-fit items-center",
+                pathname === "/" && styles.homeLink,
+              )}
             >
               <Logo className="h-8" variant="medium_modified" />
               <span className="sr-only">Daniel Giljam</span>
