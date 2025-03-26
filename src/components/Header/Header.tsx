@@ -65,7 +65,6 @@ export const Header = () => {
               <Logo
                 className="h-8"
                 variant="medium_modified"
-                aria-hidden="true"
               />
               <span className="sr-only">Daniel Giljam</span>
             </a>
