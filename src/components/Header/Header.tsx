@@ -70,7 +70,7 @@ export const Header = () => {
                     href={item.href}
                     rel={"noreferrer"}
                     className={
-                      "flex items-center rounded p-1 text-sm text-gray-500 hover:bg-gray-100 focus:ring-2 focus:ring-gray-200 focus:outline-none lg:-m-1 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                      "flex items-center rounded p-1 text-sm text-gray-500 lg:-m-1 dark:text-gray-400 dark:hover:text-white"
                     }
                     target={"_blank"}
                   >
@@ -82,7 +82,7 @@ export const Header = () => {
             </ul>
             <button
               type="button"
-              className="flex h-7 w-7 items-center justify-center rounded p-1 text-sm text-gray-500 hover:cursor-pointer hover:bg-gray-100 focus:ring-2 focus:ring-gray-200 focus:outline-none lg:-m-1 lg:hidden dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              className="flex h-7 w-7 items-center justify-center rounded p-1 text-sm text-gray-500 hover:cursor-pointer lg:-m-1 lg:hidden dark:text-gray-400 dark:hover:text-white"
               aria-controls={id}
               aria-expanded={open ? "true" : "false"}
               onClick={() => setOpen((open) => !open)}
@@ -100,12 +100,12 @@ export const Header = () => {
             )}
             id={id}
           >
-            <ul className="mt-4 flex flex-col font-medium lg:mt-0 lg:flex-row lg:gap-x-8">
+            <ul className="-mx-2 mt-4 flex flex-col font-medium lg:mt-0 lg:flex-row lg:gap-x-8">
               {internalNavItems.map((item) => (
                 <li key={item.label}>
                   <a
                     href={item.href}
-                    className="lg:hover:text-primary-700 block border-b border-gray-100 py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50 lg:border-0 lg:p-0 lg:hover:bg-transparent dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent lg:dark:hover:text-white"
+                    className="lg:hover:text-primary-700 block rounded-xl border-b border-gray-100/50 py-2 pr-4 pl-3 text-gray-700 lg:rounded-none lg:border-0 lg:p-0 lg:hover:bg-transparent dark:border-gray-700/50 dark:text-gray-400 dark:hover:bg-gray-700/50 dark:hover:text-white lg:dark:hover:bg-transparent lg:dark:hover:text-white"
                   >
                     {item.label}
                   </a>
