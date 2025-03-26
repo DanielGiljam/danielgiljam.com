@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="se">
+
+<!--
+Miscellaneous addition to Course Report Table for Front-End Development 2017 (Andrey Scherbakov, Arcada University of Applied Sciences)
+Created by Daniel Giljam.
+-->
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,500,700|Roboto:300,300i,400,400i,500,500i,700,700i&amp;subset=latin-ext">
+    <link rel="stylesheet" href="/time-travel/2018/fed17-kursrapport/fed-17-kursrapport-styles.css">
+
+    <title>Creating The Huge Color Arrays</title>
+
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>Creating The Huge Color Arrays</h1>
+        <p>För att inte måsta för hand skapa en mega array med alla 140 färgnamn och deras motsvarande RGB och HEX -koder, så utgick jag från <a href="https://www.w3schools.com/colors/colors_names.asp" target="_blank">HTML Color Names</a> tabellen på <i>W3Schools</i> och använde <b><i>Chromes utvecklarverktyg</i></b> för att kopiera endast tabell -elementet in i ett ny tom HTML-fil där jag skrev lite CSS för att gömma alla kolumner med information som jag inte behövde.</p>
+        <a href="/time-travel/2018/fed17-kursrapport/media-content/copypasting-colors.png" target="_blank"><img src="/time-travel/2018/fed17-kursrapport/media-content/copypasting-colors.png" alt="copypasting-colors.png" width="1718" height="1400"></a>
+        <p>När jag öppnade min nya HTML-fil i <b><i>Chrome</i></b> kunde jag lätt markera alla färgnamn och HEX-koder skilt efter varandra och föra in dem i <b><i>WebStorm</i></b> där jag med <b><i>Search & Replace</i></b> och <b><i>RegEx</i></b> formaterade om dem till <i>Javascript Array</i> -objekt.</p>
+        <a href="/time-travel/2018/fed17-kursrapport/media-content/color-arrays.png" target="_blank"><img src="/time-travel/2018/fed17-kursrapport/media-content/color-arrays.png" alt="color-arrays.png" width="1718" height="1400"></a>
+        <p>Eftersom <i>W3Schools</i> tabell inte inkluderade RGB-koderna och så gjorde jag en till HTML-fil med ett script som genererade dem. Öppna <a href="/time-travel/2018/fed17-kursrapport/media-content/140-hex-codes-to-140-rgb-codes.html" download>140-hex-codes-to-140-rgb-codes.html</a> i en webbläsare för att se resultatet :)</p>
+        <p>&ndash; Daniel Giljam, 24.11.2017</p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+/*
+Stylesheet for website "Daniel Giljam" @ http://people.arcada.fi/~giljamda
+Created by Daniel Giljam, 2017
+*/
+@media (max-height: 820px) {
+    .wrap {
+        display: initial;
+    }
+}
+@media (max-width: 775px) {
+    .wrap {
+        display: initial;
+    }
+    img {
+        max-width: 100%;
+    }
+    main > div {
+        margin: 0;
+        width: 100%;
+    }
+    #wd17-kursuppgift {
+        background-image: url(../media-content/wd17-kursuppgift-icon-mobile.png);
+    }
+
+    #fed17-låneansökan {
+        background-image: url(../media-content/fed17-laneansokan-icon-mobile.png);
+    }
+    #strange-soup {
+        background-image: url(../media-content/noc2-strange-soup-icon-mobile.png);
+    }
+    #console-dialogue-api {
+        background-image: url(../media-content/consoledialogueapi-icon-mobile.png);
+    }
+    div > a {
+        padding: 100px 0;
+    }
+    #cgi {
+        width: 100%;
+    }
+    a img {
+        width: 164px;
+    }
+    footer {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+    /* below: add 224px for each new icon */
+    @media (max-height: 1200px) {
+        footer {
+            position: static;
+        }
+    }
+}
+@media (max-width: 582px) {
+    img {
+        margin: 16px auto;
+        padding: 0 16px;
+    }
+    div > a {
+        padding: 50px 0;
+    }
+    a img {
+        margin: 12px auto;
+        width: 109px;
+    }
+    footer {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+    /* below: add 124px for each new icon */
+    @media (max-height: 720px) {
+        footer {
+            position: static;
+        }
+    }
+}
+@media (max-width: 436px) {
+    div > a {
+        font-size: 16px;
+        padding: 30px 0;
+    }
+    #cgi {
+        font-size: 12px;
+        font-weight: 500;
+    }
+    #cgi a {
+        font-size: 18px;
+    }
+    a img {
+        margin: 8px auto;
+        width: 82px;
+    }
+    footer {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+    /* below: add 76px for each new icon */
+    @media (max-height: 500px) {
+        footer {
+            position: static;
+        }
+    }
+}
+@media (hover: none) {
+    div > a {
+        padding: 280px 0 0 0;
+        opacity: 1;
+    }
+    span {
+        display: inline-block;
+        width: 100%;
+        padding: 4px 0;
+    }
+    .dark-bg {
+        background: none;
+    }
+    .light-bg {
+        background: none;
+    }
+    .dark-bg span {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    .light-bg span {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+    @media (max-width: 775px) {
+        div > a {
+            padding: 200px 0 0 0;
+        }
+    }
+    @media (max-width: 582px) {
+        div > a {
+            padding: 100px 0 0 0;
+        }
+    }
+    @media (max-width: 436px) {
+        div > a {
+            padding: 60px 0 0 0;
+        }
+        span {
+            padding: 2px 0;
+        }
+    }
+}

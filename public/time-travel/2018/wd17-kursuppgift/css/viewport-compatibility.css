@@ -1,0 +1,85 @@
+/*
+Stylesheet for website "WD17 Kursuppgift | Daniel Giljam"
+Created by Daniel Giljam, 2017
+*/
+
+@media (max-width: 683px){
+    section {
+        padding: 0 0.66em;
+    }
+    #video {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .videoheading {
+        margin-left: 0.66em;
+        margin-right: 0.66em;
+    }
+    .deadspace {
+        height: 34px;
+    }
+    header {
+        margin-top: 1.66em;
+    }
+    header img {
+        height: 200px;
+        width: 250px;
+    }
+    h1 {
+        margin-top: 0.5em;
+        padding-bottom: 1em;
+    }
+    table {
+        width: 100%;
+    }
+    .datatyper-primitiva table {
+        margin-bottom: 0;
+    }
+    .datatyper-primitiva {
+        float: none;
+        max-width: none;
+    }
+    .datatyper-komplexa {
+        float: none;
+        max-width: none;
+    }
+    footer {
+        position: static;
+    }
+}
+@media (max-width: 544px) {
+    .tshirtfloated {
+        height: 115px;
+        width: 105px;
+    }
+    /* .tshirtfloated {
+        display: none;
+    }
+    .tshirtinline {
+        display: inline-block;
+    } */
+}
+@media (max-width: 460px){
+    header div {
+        background-attachment: scroll;
+    }
+    .footerright {
+        float: none;
+        display: inline-block;
+        margin-top: 0;
+    }
+    .footerleft {
+        float: none;
+        display: inline-block;
+        margin-bottom: 0;
+    }
+}
+@media (max-width: 342px){
+    header {
+        margin-top: 1em;
+    }
+    header img {
+        height: 100px;
+        width: 125px;
+    }
+}

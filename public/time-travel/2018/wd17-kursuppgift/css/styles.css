@@ -1,0 +1,210 @@
+/*
+Stylesheet for website "WD17 Kursuppgift | Daniel Giljam"
+Created by Daniel Giljam, 2017
+*/
+
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    margin: 0;
+    background: black;
+    color: whitesmoke;
+    font-family: "Helvetica Neue", "Roboto", sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    line-height: 1.33em;
+}
+header {
+    max-width: none;
+    text-align: center;
+    margin-bottom: 3em;
+    margin-top: 2.33em;
+}
+header div {
+    background: white url("../media-content/JS_the_good_parts.png") no-repeat fixed center;
+    background-size: cover;
+}
+nav {
+    background: black;
+    border-bottom: 1px solid dimgray;
+}
+nav a {
+    display: inline-block;
+    font-style: normal;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 0;
+    padding: 12px;
+}
+section {
+    max-width: 683px;
+    margin: 0 auto;
+}
+.deadspace {
+    height: 68px;
+}
+h1 {
+    margin: 0;
+    font-family: "Avenir Next Condensed", "Roboto Condensed", sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-shadow: black 0 0 16px;
+    color: white;
+    line-height: 1.33em;
+    padding-bottom: 2.66em;
+}
+h2 {
+    font-weight: 300;
+    margin-top: 3em;
+    margin-bottom: 0.66em;
+}
+h3 {
+    font-weight: 500;
+    margin-top: 1.33em;
+    margin-bottom: 0.66em;
+}
+video {
+    max-width: 100%;
+}
+pre {
+    margin: 2.66em 1em;
+    border: 1px solid dimgray;
+    background: #1c2021;
+    padding: 0.66em;
+    overflow: auto;
+}
+code {
+    vertical-align: 5%;
+    font-family: "Menlo", monospace;
+    font-size: 0.88em;
+    letter-spacing: 0;
+    color: lightgray;
+    text-transform: none;
+}
+.tag {
+    color: khaki;
+}
+.string {
+    color: yellowgreen;
+}
+.comment {
+    color: lightslategray;
+}
+.datatype {
+    color: mediumpurple;
+}
+.varname {
+    color: indianred;
+}
+.value {
+    color: lightskyblue;
+}
+.valuex {
+    color: cadetblue;
+}
+b {
+    font-weight: 400;
+}
+cite {
+    font-weight: 400;
+    font-size: 0.96em;
+    letter-spacing: 0.0625em;
+}
+em {
+    font-weight: 400;
+    font-size: 0.96em;
+    letter-spacing: 0.0625em;
+}
+a {
+    color: whitesmoke;
+    font-style: italic;
+}
+a:hover {
+    color: black;
+    background: whitesmoke;
+}
+ul {
+    list-style-type: square;
+    padding-left: 1em;
+    margin: 0.66em 0;
+}
+li > pre {
+    margin: 2.66em 1em 2.66em 0;
+}
+table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin-bottom: 2.66em;
+}
+th {
+    border: 1px solid dimgray;
+    background: #323637;
+    text-align: left;
+    vertical-align: bottom;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding: 0.33em 0.5em;
+}
+td {
+    border: 1px solid dimgray;
+    background: #1c2021;
+    vertical-align: top;
+    padding: 0.33em 0.5em;
+}
+.datatyper-primitiva {
+    float: left;
+    max-width: 49%;
+}
+.datatyper-komplexa {
+    float: right;
+    max-width: 49%;
+}
+.tshirtfloated {
+    float: right;
+    margin: 0 1em;
+}
+.tshirtinline {
+    display: none;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: black;
+    border-top: 1px solid dimgray;
+}
+footer span {
+    margin: 0.66em 0.5em;
+}
+.footerright {
+    font-family: "Helvetica Neue", "Roboto", sans-serif;
+    float: right;
+}
+.footerleft {
+    font-family: "Helvetica Neue", "Roboto", sans-serif;
+    float: left;
+}
+.signature {
+    font-family: "Avenir Next", "Roboto", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+}
+.signature a {
+    display: inline-block;
+    font-style: normal;
+    text-decoration: none;
+}
+.signature a:hover {
+    color: whitesmoke;
+    background: initial;
+}
+.coursetag {
+    text-align: left;
+    font-size: 0.88em;
+    font-weight: 400;
+}

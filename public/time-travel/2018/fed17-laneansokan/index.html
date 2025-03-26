@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="se">
+
+<!--
+Course Project for Front-End Development 2017 (Andrey Scherbakov, Arcada University of Applied Sciences)
+Website created by Daniel Giljam.
+-->
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="/time-travel/2018/fed17-laneansokan/css/styles.css">
+    <link rel="stylesheet" href="/time-travel/2018/fed17-laneansokan/css/viewport-compatibility.css">
+
+    <script src="http://people.arcada.fi/~parland/fed17/kontroll.js"></script>
+    <script src="https://people.arcada.fi/~parland/fed17/kontroll.js"></script>
+
+    <title>FED17: Låneansökan | Daniel Giljam</title>
+
+</head>
+
+<body id="body">
+
+    <div id="grid-layout">
+
+        <div id="form-container">
+            <form id="form">
+
+                <fieldset id="personuppgifter">
+
+                    <legend>Personuppgifter</legend>
+
+                    <div>
+                        <label for="name">Namn: </label>
+                        <input id="name" type="text" name="name" tabindex="1" onfocus="nameOnFocus()" onblur="nameOnBlur(this)">
+                        <div class="outputs1" id="name-output1.1"></div>
+                        <div class="outputs1" id="name-output1.2"></div>
+                        <div class="outputs1" id="name-output2"></div>
+                    </div>
+                    <div>
+                        <label for="signum">Personnummer: </label>
+                        <input id="signum" type="text" name="signum" tabindex="2" onfocus="signumOnFocus()" onblur="signumOnBlur(this)">
+                        <div class="outputs1" id="signum-output"></div>
+                    </div>
+
+                </fieldset>
+
+                <br>
+
+                <fieldset id="låneansökan" disabled>
+
+                    <legend>Låneansökan</legend>
+
+                    <div>
+                        <label for="loan">Önskad summa på lån: </label>
+                        <input id="loan" type="text" name="loan" tabindex="3" onfocus="loanOnFocus()" onblur="loanOnBlur(this)">
+                        <span>€</span>
+                        <div class="outputs2" id="loan-output1"></div>
+                        <div class="outputs2" id="loan-output2"></div>
+                    </div>
+                    <div>
+                        <label for="years">Lånetid (ange i år): </label>
+                        <input id="years" type="text" name="years" tabindex="4" onfocus="yearsOnFocus()" onblur="yearsOnBlur(this)">
+                        <div class="outputs2" id="years-output1"></div>
+                        <div class="outputs2" id="years-output2"></div>
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <span class="fake-label">Månatlig avbetalning: </span>
+                        <span id="monthly"></span><span id="monthly1"></span>
+                    </div>
+                    <div>
+                        <span class="fake-label">Totalt: </span>
+                        <span id="total"></span><span id="total1"></span>
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <span class="fake-label">Ränta (fast): </span>
+                        <span id="rate"></span>
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <span class="fake-label">Första avbetalningen: </span>
+                        <span id="first_tranche"></span>
+                    </div>
+                    <div>
+                        <span class="fake-label">Referensnummer: </span>
+                        <span id="referensnummer"></span>
+                    </div>
+
+                </fieldset>
+
+                <br>
+
+                <fieldset id="bakgrundsfärg" disabled>
+                    <div>
+                        <label for="color">Önskad bakgrundsfärg: </label>
+                        <input id="color" type="text" name="color" tabindex="5" onfocus="colorOnFocus()" onblur="colorOnBlur(this)">
+                        <span>*</span>
+                        <div class="outputs2" id="color-output"></div>
+                    </div>
+
+                </fieldset>
+
+                <br>
+
+                <span id="triple-star">absolut viktigaste och mest obligatoriska uppiften *</span>
+
+                <br>
+
+                <fieldset id="submit-field" disabled>
+                    <div>
+                        <button id="submit" type="submit" name="submit">Skicka</button>
+                    </div>
+                </fieldset>
+
+            </form>
+        </div>
+
+        <div id="script-output">
+            <div id="script-output-layer">
+                <h2>Script Output:</h2>
+                <code id="antal_skander"></code>
+                <code id="name_unicode"></code>
+                <code id="birthday"></code>
+                <code id="roman0"></code><code id="roman"></code>
+                <code id="color_name"></code>
+            </div>
+        </div>
+
+        <div id="links">
+            <span id="author-link"><a href="/time-travel/2018">Daniel Giljam</a> 2017</span><br>
+            <span id="report-link">(<a href="/time-travel/2018/fed17-kursrapport">FED17 Course Report</a>)</span>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="/time-travel/2018/fed17-laneansokan/scripts/main-scripts.js"></script>
+    <script type="text/javascript" src="/time-travel/2018/fed17-laneansokan/scripts/name-script.js"></script>
+    <script type="text/javascript" src="/time-travel/2018/fed17-laneansokan/scripts/signum-script.js"></script>
+    <script type="text/javascript" src="/time-travel/2018/fed17-laneansokan/scripts/color-script.js"></script>
+
+</body>
+
+</html>
