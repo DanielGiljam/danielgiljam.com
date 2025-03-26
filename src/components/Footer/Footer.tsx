@@ -1,3 +1,5 @@
+import { Logo } from "@/components/Logo";
+
 /**
  * Based on https://flowbite.com/blocks/e-commerce/mega-footers/#default-mega-footer.
  */
@@ -704,52 +706,32 @@ export const Footer = () => {
 
         <div className="py-6 md:py-8">
           <div className="gap-4 space-y-5 xl:flex xl:items-center xl:justify-between xl:space-y-0">
-            <a href="#" title="" className="block">
-              <img
-                className="block h-8 w-auto dark:hidden"
-                src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/logo-full.svg"
-                alt=""
-              />
-              <img
-                className="hidden h-8 w-auto dark:block"
-                src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/logo-full-dark.svg"
-                alt=""
-              />
+            <a href="#" title="" className="flex items-center gap-3">
+              <Logo className="h-6 w-auto" variant="medium_modified" />
+              <span
+                className={
+                  "relative end-[-0.1em] text-center font-(family-name:--font-roboto) text-lg leading-none font-light tracking-[0.2em] text-nowrap uppercase"
+                }
+              >
+                Daniel Giljam
+              </span>
             </a>
 
             <ul className="flex flex-wrap items-center gap-4 text-sm text-gray-900 xl:justify-center dark:text-white">
               <li>
                 <a href="#" title="" className="font-medium hover:underline">
-                  {" "}
-                  Flowbite Express{" "}
+                  Credits
                 </a>
               </li>
               <li>
                 <a href="#" title="" className="font-medium hover:underline">
-                  {" "}
-                  Legal Notice{" "}
-                </a>
-              </li>
-              <li>
-                <a href="#" title="" className="font-medium hover:underline">
-                  {" "}
-                  Product Listing Policy{" "}
-                </a>
-              </li>
-              <li>
-                <a href="#" title="" className="font-medium hover:underline">
-                  {" "}
-                  Terms of Use{" "}
+                  Source code
                 </a>
               </li>
             </ul>
 
             <p className="text-sm text-gray-500 dark:text-gray-400">
-              © 2024{" "}
-              <a href="#" className="hover:underline">
-                Flowbite
-              </a>
-              , Inc. All rights reserved.
+              © 2025 Daniel Giljam. All rights reserved.
             </p>
           </div>
         </div>
