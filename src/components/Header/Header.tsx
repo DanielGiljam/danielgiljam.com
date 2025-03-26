@@ -59,7 +59,7 @@ export const Header = () => {
             <a
               href="/"
               className={cn(
-                "flex w-fit items-center",
+                "flex w-fit items-center text-gray-500 dark:text-gray-400 dark:hover:text-white",
                 pathname === "/" && styles.homeLink,
               )}
             >
