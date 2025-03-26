@@ -44,7 +44,7 @@ export const Header = () => {
   const id = React.useId();
   const [open, setOpen] = React.useState(false);
   return (
-    <header className="sticky inset-0 z-20 -mb-(--header-height)">
+    <header className="sticky inset-0 z-20">
       <nav
         className={cn(
           "absolute w-full bg-gradient-to-b from-black to-transparent px-4 py-2.5 not-data-open:h-(--header-height) lg:h-(--header-height) lg:px-6",
