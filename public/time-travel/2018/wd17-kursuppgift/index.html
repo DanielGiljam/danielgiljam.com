@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="se">
+
+<!--
+Course Project for Web Development 2017 (Andrey Scherbakov, Arcada University of Applied Sciences)
+Text, images and video supplied by course.
+Website created by Daniel Giljam.
+-->
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,500,700|Roboto:300,300i,400,400i,500,500i,700,700i&amp;subset=latin-ext">
+    <link rel="stylesheet" href="/time-travel/2018/wd17-kursuppgift/css/styles.css">
+    <link rel="stylesheet" href="/time-travel/2018/wd17-kursuppgift/css/viewport-compatibility.css">
+
+    <title>WD17 Kursuppgift | Daniel Giljam</title>
+
+</head>
+
+<!-- BODY STARTS HERE -->
+
+<body>
+
+<header>
+
+    <div>
+        <img src="/time-travel/2018/wd17-kursuppgift/media-content/JavaScript.png" alt="JavaScript Icon" height="400" width="500">
+        <h1>Introduktion till programmering i JavaScript</h1>
+    </div>
+
+    <nav id="allmant">
+        <a href="#allmant">Allmänt</a>
+        <a href="#video">Video</a>
+        <a href="#variabler">Variabler</a>
+        <a href="#programsatser-och-uttryck">Programsatser och uttryck</a>
+        <a href="#datatyper">Datatyper</a>
+        <a href="#funktioner">Funktioner</a>
+    </nav>
+
+</header>
+
+
+    <section>
+        <ul>
+            <li>Programspråk som ger funktionalitet åt webbsidor</li>
+            <li>Programspråket kan köras i webbläsaren på klientsidan &ndash; inte på serversidan</li>
+            <li>Programspråket infogas i HTML&#45;koden med <code class="tag">&lt;script&gt;</code> ‐taggar:
+
+<pre><code class="tag">&lt;script</code><code> type=</code><code class="string">&quot;text/javascript&quot;</code><code class="tag">&gt;</code>
+    <code>window.alert(</code><code class="string">'Hello, World!'</code><code>); </code><code class="comment">// JavaScript&#8208;kod</code>
+<code class="tag">&lt;/script&gt;</code></pre>
+
+                men kan också placeras i externa filer:
+
+<pre><code class="tag">&lt;script</code><code> type=</code><code class="string">&quot;text/javascript&quot;</code><code> src=</code><code class="string">&quot;test.js&quot;</code><code class="tag">&gt;&lt;/script&gt;</code></pre></li>
+
+            <li>Placeras på olika ställen i HTML-koden
+            <ul style="list-style-type: square">
+                <li>Brukar ligga i head &#45;delen och körs då sidan läses in eller då koden anropas (vid användning av funktioner)</li>
+                <li>Läggs ibland i body &#45;delen, om man vill att koden ska köras där</li>
+            </ul></li>
+        </ul>
+    </section>
+
+
+    <section id="video">
+        <h3 class="videoheading">Video: Webbutveckling 2 &ndash; DOM och JavaScript</h3>
+        <video src="/time-travel/2018/wd17-kursuppgift/media-content/Video.mp4" controls></video>
+    </section>
+
+
+    <section id="variabler">
+        <h2>Variabler</h2>
+        <p>
+        Värden (data) i program sparas i variabler.
+        En variabel är en ”behållare” för att spara ett värde, så att det senare kan användas. En variabel är alltså ett litet ”minne” i programmet.
+        Variablerna deklareras med nyckelord var och ges ett namn, så att man kan referera till dem:
+        </p>
+
+<pre><code class="datatype">var</code><code> </code><code class="varname">birthYear</code><code> = </code><code class="value">1994</code><code>;</code></pre>
+
+        <p>
+        Variabeln med namet <code class="varname">birthYear</code> får värdet 1994.
+        För variabelnamn använd endast
+        </p>
+        <ul>
+            <li>bokstäverna <b>a…z</b>, <b>A…Z</b></li>
+            <li>siffror <b>0…9</b></li>
+            <li>_ (underscore: <a href="https://en.wiktionary.org/wiki/underscore" target="_blank">https://en.wiktionary.org/wiki/underscore</a>)</li>
+        </ul>
+        <p>
+        <b>OBS!</b> Namn är känsliga för bokstavsregister: <code class="varname">birthYear</code> och <code class="varname">birthyear</code> är olika namn.
+        Namnet får ej börja med en siffra. Se <cite>Code Conventions for the JavaScript Programming Language</cite>: <a href="http://javascript.crockford.com/code.html" target="_blank">http://javascript.crockford.com/code.html</a>
+        </p>
+    </section>
+
+
+    <section id="programsatser-och-uttryck">
+        <h2>Programsatser och uttryck</h2>
+        <ul>
+            <li>Kommando/instruktion för att utföra något</li>
+            <li>Jämför med imperativa meningar i naturliga språk:<br>
+                <em>”räkna ut personens åldern utgående från nuvarande år och personens födelseår”</em></li>
+            <li>Avslutas i JavaScript med <em>semikolon</em> <strong>;</strong></li>
+        </ul>
+        <p>
+            Exempel: tilldelningssats
+        </p>
+
+<pre><code class="datatype">var</code><code> </code><code class="varname">currentYear</code><code> = </code><code class="value">2017</code><code>;</code>
+<code class="datatype">var</code><code> </code><code class="varname">age</code><code> = </code><code class="varname">currentYear</code><code> - </code><code class="varname">birthYear</code><code>;</code></pre>
+
+        <p>
+            Variabeln <code class="varname">age</code> får värdet 23.
+        </p>
+    </section>
+
+
+    <section id="datatyper">
+        <h2>Datatyper</h2>
+        <p>
+            Data kan anges i olika form och variabels i JavaScript kan hålla vilken datatyp som helst.
+        </p>
+
+        <div class="datatyper-primitiva">
+        <h3>Primitiva</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>namn</th>
+                    <th>exempel</th>
+                    <th><code>typeof</code> returns</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Number</td>
+                <td><code class="value">3</code>, <code class="value">3.14</code>, <code class="value">4e5</code><code>, +Infinity, -Infinity, NaN</code></td>
+                <td>”number"</td>
+            </tr>
+            <tr>
+                <td>String</td>
+                <td><code class="string">"text"</code>, <code class="string">'NaN'</code></td>
+                <td>”string”</td>
+            </tr>
+            <tr>
+                <td>boolean</td>
+                <td><code class="valuex">true</code>, <code class="valuex">false</code></td>
+                <td>"boolean"</td>
+            </tr>
+            <tr>
+                <td>Null</td>
+                <td><code class="valuex">null</code></td>
+                <td>"object"</td>
+            </tr>
+            <tr>
+                <td>Undefined</td>
+                <td><code class="valuex">undefined</code></td>
+                <td>"undefined"</td>
+            </tr>
+        </table>
+        </div>
+
+        <div class="datatyper-komplexa">
+        <h3>Komplexa</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>namn</th>
+                    <th>exempel</th>
+                    <th><code>typeof</code> returns</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Object</td>
+                <td><code>{</code><code class="varname">name</code><code>: </code><code class="string">"Ali"</code><code>, </code><code class="varname">birthYear</code><code>: </code><code class="value">1994</code><code>};</code></td>
+                <td>"object"</td>
+            </tr>
+            <tr>
+                <td>String</td>
+                <td><code class="datatype">new</code><code> String(NaN)</code></td>
+                <td>"object"</td>
+            </tr>
+            <tr>
+                <td>Function</td>
+                <td><code class="datatype">function</code><code>(</code><code class="varname">x</code><code>) {return </code><code class="varname">x</code><code>*</code><code class="varname">x</code><code>;}</code></td>
+                <td>"function"</td>
+            </tr>
+            <tr>
+                <td>Dates</td>
+                <td><code class="datatype">new</code><code> Date(</code><code class="value">1994</code><code>, </code><code class="value">0</code><code>, </code><code class="value">25</code><code>)</code></td>
+                <td>"object"</td>
+            </tr>
+            <tr>
+                <td>Array</td>
+                <td><code>[</code><code class="value">1994</code><code>, </code><code class="value">0</code><code>, </code><code class="value">25</code><code>]</code></td>
+                <td>"object"</td>
+            </tr>
+        </table>
+        </div>
+
+        <p style="clear: both">
+            Speciella värden:
+        </p>
+        <ul>
+            <li>Null: ingenting, utan speciﬁcerad typ, men framstår som ”object”</li>
+            <li>Undeﬁned:	en variabel som inte fick något värde.</li>
+            <li>NaN (Not a Number), men framstår som <code>number</code>:  resultat då man försöker utföra en aritmetisk operation på värden som inte är tal, t.ex.
+
+<pre><code class="datatype">var</code><code> </code><code class="varname">halvaTexten</code><code> = </code><code class="string">"text"</code><code>/</code><code class="value">2</code><code>;</code>
+    <code>console.log(</code><code class="varname">halvaTexten</code><code>); </code><code class="comment">// printar ut NaN</code></pre>
+
+            </li>
+        </ul>
+        <img class="tshirtfloated" src="/time-travel/2018/wd17-kursuppgift/media-content/Obj_plus_Arr.png" alt="JavaScript T-shirt" height="230" width="210">
+        <p>
+            Du kanske undrar varför NaN är inte samma som NaN, d.v.s. NaN==NaN resulterar i false. Det finns en giltig orsak till det: <a href="https://stackoverflow.com/a/1573715" target="_blank">https://stackoverflow.com/a/1573715</a>
+        </p>
+        <p>
+            Har du frågor om andra speciella värden i JavaScript? Skicka då din fråga till Julgubben: <a href="mailto:jag.undrar.varfor@gmail.com">jag.undrar.varfor@gmail.com</a>
+        </p>
+        <img class="tshirtinline" src="/time-travel/2018/wd17-kursuppgift/media-content/Obj_plus_Arr.png" alt="JavaScript T-shirt" height="230" width="210">
+    </section>
+
+
+    <section id="funktioner" style="clear: both">
+        <h2>Funktioner</h2>
+        <p>
+            Programkoden kan delas in i funktioner. Funktioner är återanvändbara block av kod som du kan skriva en gång och köra igen och igen, vilket eliminerar behovet av att skriva upprepande kod hela tiden. Det finns ett antal sätt att definiera funktioner, men för närvarande koncentrerar vi oss på en enkel typ.
+        </p>
+
+<pre><code class="comment">// beskriver en funktion som tar vilken som helst person
+// och returnerar dennes ålder</code>
+
+<code class="datatype">function</code><code> </code><code class="varname">age</code><code>(</code><code class="varname">person</code><code>) {
+    return (</code><code class="datatype">new</code><code> Date()).getUTCFullYear() - </code><code class="varname">person</code><code>.</code><code class="varname">birthYear</code><code>;
+};</code></pre>
+
+        <p>
+            Här har vi definierat en funktion med hjälp av nyckelord <code class="datatype">function</code>, följt av namnet <code class="varname">age</code>, och sedan parentes och parametern <code class="varname">person</code> efter det. Därefter sätter vi två <em>måsvingar</em> <b>{</b> <b>}</b>. Inuti måsvingarna finns all den kod som vi vill köra när vi anropar funktionen. Sedan skapar vi en människa (object) och kallar den för <code class="varname">teamMember</code>:
+        </p>
+
+<pre><code class="datatype">var</code><code> </code><code class="varname">teamMember</code><code> = {</code><code class="varname">name</code><code>: </code><code class="string">"Mauritz"</code><code>, </code><code class="varname">birthYear</code><code>: </code><code class="value">1994</code><code>};</code></pre>
+
+        <p>
+            Sedan ska vi köra vår funktion <code class="varname">age</code>, d.v.s. skickar vår människa <code class="varname">teamMember</code> som ett argument till parametern <code class="varname">person</code> i funktionen <code class="varname">age</code> och printar ut resultat enligt följande:
+        </p>
+
+<pre><code>console.log( </code><code class="varname">age</code><code>(</code><code class="varname">teamMember</code><code>) ); </code><code class="comment">// printar ut 23</code></pre>
+
+        <p>
+            Egentligen sku det vara snyggare och säkrare att skriva så:
+        </p>
+
+<pre><code class="datatype">var</code><code> </code><code class="varname">Person</code><code> = </code><code class="datatype">function</code><code> (</code><code class="varname">name</code><code>, </code><code class="varname">bYear</code><code>) {
+    this.</code><code class="varname">name</code><code> = </code><code class="varname">name</code><code>;
+    this.</code><code class="varname">birthYear</code><code> = </code><code class="varname">bYear</code><code>;
+    this.</code><code class="varname">age</code><code> = </code><code class="datatype">function</code><code> () {
+        return (</code><code class="datatype">new</code><code> Date()).getUTCFullYear() - this.</code><code class="varname">birthYear</code><code>;
+    };
+};</code>
+
+<code class="datatype">var</code><code> </code><code class="varname">teamMember</code><code> = </code><code class="datatype">new</code><code> </code><code class="varname">Person</code><code>(</code><code class="string">'Mauritz'</code><code>, </code><code class="value">1994</code><code>);
+console.log(</code><code class="varname">teamMember</code><code>.</code><code class="varname">age</code><code>()); </code><code class="comment">// printar ut 23</code></pre>
+
+        <p>
+            Funktionen kan anropas
+        </p>
+        <ul>
+            <li>från en annan funktion</li>
+            <li>då webbsidan laddats</li>
+            <li>från en tagg i HTML&#45;koden, t.ex. en knapp som användaren klickar på</li>
+        </ul>
+        <p>
+            Fördelar med funktioner
+        </p>
+        <ul>
+            <li>Programmet delas upp i mindre delar</li>
+            <li>Det blir då mer strukturerat och överskådligt</li>
+            <li>En funktion kan anropas ﬂera gånger och från ﬂera ställen</li>
+        </ul>
+    </section>
+
+
+<div class="deadspace"></div>
+
+<footer>
+
+    <span class="footerleft"><strong class="coursetag">WD17</strong> Kursuppgift</span>
+    <span class="footerright"><strong class="signature"><a href="/time-travel/2018">Daniel Giljam</a></strong> 2017</span>
+
+</footer>
+
+</body>
+
+<!-- BODY ENDS HERE -->
+
+</html>

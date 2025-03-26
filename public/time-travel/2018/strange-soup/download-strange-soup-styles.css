@@ -1,0 +1,47 @@
+/*
+Stylesheet for website "Download Strange Soup"
+Created by Daniel Giljam, 2018
+*/
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    background-color: black;
+    color: white;
+    font-family: "Roboto", "Helvetica Neue", "Arial", sans-serif;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 96px;
+    max-width: 776px;
+}
+img {
+    background: black url(media-content/strange-soup-background-image.png) no-repeat fixed top/contain;
+    width: 100%;
+    height: auto;
+}
+p {
+    padding: 0 8px;
+}
+a, a:visited {
+    color: white;
+    font-style: italic;
+}
+a:hover {
+    background-color: white;
+    color: black;
+}
+body > a {
+    display: inline-block;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+@media (hover: none) {
+    a, a:visited {
+        color: white;
+        font-style: italic;
+        text-decoration: underline;
+    }
+}
