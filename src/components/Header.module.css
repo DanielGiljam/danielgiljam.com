@@ -10,17 +10,45 @@
   );
   --range-end: calc(var(--range-start) + var(--header-height));
 
-  @supports (animation-range: var(--range-start) var(--range-end)) {
-    animation: nav-backdrop-blur linear forwards;
-    animation-timeline: scroll();
-    animation-range: var(--range-start) var(--range-end);
-  }
+  backdrop-filter: blur(theme(blur.md));
 
-  & .homeLink {
+  &:not([data-open]) {
+    backdrop-filter: blur(0);
+
     @supports (animation-range: var(--range-start) var(--range-end)) {
-      animation: home-link-reveal linear forwards;
+      animation: nav-backdrop-blur linear forwards;
       animation-timeline: scroll();
       animation-range: var(--range-start) var(--range-end);
+    }
+
+    & .homeLink {
+      opacity: 0;
+      visibility: hidden;
+      @supports (animation-range: var(--range-start) var(--range-end)) {
+        animation: home-link-reveal linear forwards;
+        animation-timeline: scroll();
+        animation-range: var(--range-start) var(--range-end);
+      }
+    }
+  }
+
+  @media (width >= theme(breakpoint.lg)) {
+    backdrop-filter: blur(0);
+
+    @supports (animation-range: var(--range-start) var(--range-end)) {
+      animation: nav-backdrop-blur linear forwards;
+      animation-timeline: scroll();
+      animation-range: var(--range-start) var(--range-end);
+    }
+
+    & .homeLink {
+      opacity: 0;
+      visibility: hidden;
+      @supports (animation-range: var(--range-start) var(--range-end)) {
+        animation: home-link-reveal linear forwards;
+        animation-timeline: scroll();
+        animation-range: var(--range-start) var(--range-end);
+      }
     }
   }
 }
