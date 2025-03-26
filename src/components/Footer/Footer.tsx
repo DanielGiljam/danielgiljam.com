@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Logo } from "@/components/Logo";
 
 const InlineCode = ({ children }: { children: React.ReactNode }) => (
-  <code className="rounded-sm bg-gray-200/50 px-1.5 py-0.5 text-[smaller] hover:bg-gray-200 dark:bg-gray-700/50 dark:hover:bg-gray-700">
+  <code className="rounded-sm bg-gray-100/50 px-1.5 py-0.5 text-[smaller] hover:bg-gray-100 dark:bg-gray-700/50 dark:hover:bg-gray-700">
     {children}
   </code>
 );
