@@ -3,9 +3,9 @@
 import React from "react";
 
 import { cn } from "@/cn";
-import { AnimatingHamburgerIcon } from "./AnimatingHamburgerIcon";
+import { AnimatingHamburgerIcon } from "@/components/AnimatingHamburgerIcon";
+import { Logo } from "@/components/Logo";
 import styles from "./Header.module.css";
-import { Logo } from "./Logo";
 
 const externalNavItems = [
   {
@@ -44,7 +44,7 @@ const internalNavItems = [
 /**
  * Based on https://flowbite.com/blocks/marketing/header/#default-header-navigation.
  */
-export const HeaderClient = () => {
+export const Header = () => {
   const id = React.useId();
   const [open, setOpen] = React.useState(false);
   return (

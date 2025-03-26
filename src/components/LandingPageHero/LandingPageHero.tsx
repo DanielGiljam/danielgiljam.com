@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { Logo } from "./Logo";
+
+import { Logo } from "@/components/Logo";
 
 export const LandingPageHero = () => {
   return (
