@@ -7,8 +7,8 @@ import { Logo } from "@/components/Logo";
  */
 export const Footer = () => {
   return (
-    <footer className="bg-white antialiased dark:bg-gray-800">
-      <div className="mx-auto max-w-screen-xl px-4 2xl:px-0">
+    <footer className="bg-white px-4 antialiased 2xl:px-0 dark:bg-gray-800">
+      <div className="mx-auto max-w-screen-xl">
         <div className="border-b border-gray-100 py-6 md:py-8 lg:py-16 dark:border-gray-700">
           <div className="items-start gap-6 md:gap-8 lg:flex 2xl:gap-24">
             <div className="grid min-w-0 flex-1 grid-cols-2 gap-6 md:gap-8 xl:grid-cols-3">
