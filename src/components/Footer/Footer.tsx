@@ -21,7 +21,7 @@ const bottomLinks = [
  */
 export const Footer = () => {
   return (
-    <footer className="bg-white px-4 antialiased 2xl:px-0 dark:bg-gray-800">
+    <footer className="bg-white px-4 antialiased lg:px-6 dark:bg-gray-800">
       <div className="mx-auto max-w-screen-xl">
         <div className="border-b border-gray-100 py-6 md:py-8 lg:py-16 dark:border-gray-700">
           <div className="items-start gap-6 md:gap-8 lg:flex 2xl:gap-24">
