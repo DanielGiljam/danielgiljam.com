@@ -517,7 +517,7 @@ export const Footer = () => {
 
         <div className="py-6 md:py-8">
           <div className="gap-4 space-y-5 xl:flex xl:items-center xl:justify-between xl:space-y-0">
-            <a href="#" title="" className="flex items-center gap-3">
+            <p className="flex items-center gap-3">
               <Logo className="h-6 w-auto" variant="medium_modified" />
               <span
                 className={
@@ -526,7 +526,7 @@ export const Footer = () => {
               >
                 Daniel Giljam
               </span>
-            </a>
+            </p>
 
             <ul className="flex flex-wrap items-center gap-4 text-sm text-gray-900 xl:justify-center dark:text-white">
               {bottomLinks.map(({ label, ...props }) => (
