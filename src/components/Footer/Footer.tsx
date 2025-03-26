@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { Logo } from "@/components/Logo";
 
 /**
@@ -719,14 +721,20 @@ export const Footer = () => {
 
             <ul className="flex flex-wrap items-center gap-4 text-sm text-gray-900 xl:justify-center dark:text-white">
               <li>
-                <a href="#" title="" className="font-medium hover:underline">
-                  Credits
-                </a>
+                <Link href="/credits" className="font-medium hover:underline">
+                  Credits & attributions
+                </Link>
               </li>
               <li>
-                <a href="#" title="" className="font-medium hover:underline">
+                <Link
+                  href="https://github.com/danielgiljam/danielgiljam.com"
+                  rel="noreferrer"
+                  target="_blank"
+                  title="This website's source code on GitHub"
+                  className="font-medium hover:underline"
+                >
                   Source code
-                </a>
+                </Link>
               </li>
             </ul>
 
