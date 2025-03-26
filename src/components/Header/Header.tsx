@@ -87,7 +87,7 @@ export const Header = () => {
             </ul>
             <button
               type="button"
-              className="flex h-7 w-7 items-center justify-center rounded p-1 text-sm text-gray-500 hover:cursor-pointer lg:-m-1 lg:hidden dark:text-gray-400 dark:hover:text-white"
+              className="flex h-7 w-7 items-center justify-center overflow-hidden rounded p-1 text-sm text-gray-500 hover:cursor-pointer lg:-m-1 lg:hidden dark:text-gray-400 dark:hover:text-white"
               aria-controls={id}
               aria-expanded={open ? "true" : "false"}
               onClick={() => setOpen((open) => !open)}
