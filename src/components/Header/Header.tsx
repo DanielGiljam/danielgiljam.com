@@ -62,10 +62,7 @@ export const Header = () => {
               href="/"
               className={cn("flex w-fit items-center", styles.homeLink)}
             >
-              <Logo
-                className="h-8"
-                variant="medium_modified"
-              />
+              <Logo className="h-8" variant="medium_modified" />
               <span className="sr-only">Daniel Giljam</span>
             </a>
           </div>
