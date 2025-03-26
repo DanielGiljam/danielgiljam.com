@@ -6,7 +6,7 @@
   --background: #ffffff;
   --foreground: #000000;
 
-  --header-height: --spacing(15);
+  --header-height: --spacing(13);
 
   --landing-page-hero-height: 75vh;
 
@@ -30,12 +30,6 @@
   :root {
     --background: #000000;
     --foreground: #ffffff;
-  }
-}
-
-@media (width >= theme(breakpoint.lg)) {
-  :root {
-    --header-height: --spacing(13);
   }
 }
 
