@@ -145,7 +145,9 @@ const links = [
 const bottomLinks = [
   {
     label: "Credits & attributions",
-    href: "/credits",
+    href: `https://github.com/danielgiljam/danielgiljam.com/blob/${process.env.VERCEL_GIT_COMMIT_SHA}/CREDITS`,
+    target: "_blank",
+    rel: "noreferrer",
   },
   {
     label: "Source code",
