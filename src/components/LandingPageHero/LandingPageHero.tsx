@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import { Logo } from "@/components/Logo";
+import starfield from "./starfield.png";
 
 export const LandingPageHero = () => {
   return (
@@ -32,7 +33,7 @@ export const LandingPageHero = () => {
         alt={"starfield"}
         aria-hidden={"true"}
         sizes={"100vw"}
-        src={"/starfield.png"}
+        src={starfield.src}
         fill
         priority
       />
