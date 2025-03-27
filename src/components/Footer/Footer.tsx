@@ -214,7 +214,7 @@ export const Footer = () => {
             </ul>
 
             <p className="text-sm text-gray-500 dark:text-gray-400">
-              © 2025 Daniel Giljam. All rights reserved.
+              © 2025 Daniel Giljam
             </p>
           </div>
         </div>
