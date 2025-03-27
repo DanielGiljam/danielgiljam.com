@@ -2,6 +2,8 @@
 
 @plugin "@iconify/tailwind4";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --background: #ffffff;
   --foreground: #000000;
@@ -26,11 +28,9 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #000000;
-    --foreground: #ffffff;
-  }
+.dark {
+  --background: #000000;
+  --foreground: #ffffff;
 }
 
 body {
