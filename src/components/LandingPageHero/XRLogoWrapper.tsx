@@ -10,7 +10,7 @@ const XRLogo = dynamic(
 
 export const XRLogoWrapper = () => {
   return (
-    <div className="absolute right-0 bottom-0 z-10">
+    <div className="absolute inset-0 z-10 -mt-[calc(var(--logo-lockup-gap-size)+var(--logo-lockup-text-size)-var(--header-height))]">
       <XRLogo />
     </div>
   );

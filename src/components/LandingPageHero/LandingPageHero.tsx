@@ -13,13 +13,15 @@ export const LandingPageHero = () => {
     >
       <div
         className={
-          "z-10 mt-15 flex flex-col items-center gap-(--logo-lockup-gap-size) lg:mt-13"
+          "z-10 mt-(--header-height) flex flex-col items-center gap-(--logo-lockup-gap-size)"
         }
       >
         <Logo
           variant={"large"}
           aria-hidden={"true"}
-          className={"h-(--logo-lockup-logo-size) w-(--logo-lockup-logo-size)"}
+          className={
+            "invisible h-(--logo-lockup-logo-size) w-(--logo-lockup-logo-size)"
+          }
         />
         <h1
           className={

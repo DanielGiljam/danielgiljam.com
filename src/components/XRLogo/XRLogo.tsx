@@ -39,5 +39,14 @@ const ModelViewer = createComponent({
 });
 
 export const XRLogo = () => {
-  return <ModelViewer src="/logo.glb" reveal="manual" ar />;
+  return (
+    <ModelViewer
+      className="h-full w-full"
+      src="/logo.glb"
+      camera-orbit="0deg 90deg 300%"
+      max-camera-orbit="Infinity 180deg 300%"
+      scale="0.25 0.25 0.25"
+      ar
+    />
+  );
 };
