@@ -13,18 +13,22 @@
   backdrop-filter: blur(theme(blur.md));
 
   &:not([data-open]) {
-    backdrop-filter: blur(0);
+    backdrop-filter: blur(theme(blur.md));
 
     @supports (animation-range: var(--range-start) var(--range-end)) {
+      backdrop-filter: blur(0);
+
       animation: nav-backdrop-blur linear forwards;
       animation-timeline: scroll();
       animation-range: var(--range-start) var(--range-end);
     }
 
     & .homeLink {
-      opacity: 0;
-      visibility: hidden;
+      opacity: 100%;
+      visibility: visible;
       @supports (animation-range: var(--range-start) var(--range-end)) {
+        opacity: 0;
+        visibility: hidden;
         animation: home-link-reveal linear forwards;
         animation-timeline: scroll();
         animation-range: var(--range-start) var(--range-end);
@@ -33,18 +37,23 @@
   }
 
   @media (width >= theme(breakpoint.lg)) {
-    backdrop-filter: blur(0);
+    backdrop-filter: blur(theme(blur.md));
 
     @supports (animation-range: var(--range-start) var(--range-end)) {
+      backdrop-filter: blur(0);
+
       animation: nav-backdrop-blur linear forwards;
       animation-timeline: scroll();
       animation-range: var(--range-start) var(--range-end);
     }
 
     & .homeLink {
-      opacity: 0;
-      visibility: hidden;
+      opacity: 100%;
+      visibility: visible;
       @supports (animation-range: var(--range-start) var(--range-end)) {
+        opacity: 0;
+        visibility: hidden;
+
         animation: home-link-reveal linear forwards;
         animation-timeline: scroll();
         animation-range: var(--range-start) var(--range-end);
