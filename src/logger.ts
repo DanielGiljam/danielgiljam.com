@@ -1,10 +1,9 @@
 import adze, { setup, levels, type Level } from "adze";
 
-const withinRange = (x: number, min: number, max: number) =>
-  x >= min && x <= max;
+import { inRange } from "@/utils/numbers";
 
 const isLogLevel = (loglevel: unknown): loglevel is Level | number =>
-  levels.includes(loglevel as never) || withinRange(Number(loglevel), 0, 8);
+  levels.includes(loglevel as never) || inRange(Number(loglevel), 0, 8);
 
 const getLogLevel = (): Level | number => {
   if (typeof localStorage !== "undefined") {
