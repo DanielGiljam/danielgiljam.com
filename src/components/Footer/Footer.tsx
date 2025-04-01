@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import { ReportABug } from "./ReportABug";
+
 import { Logo } from "@/components/Logo";
 
 const InlineCode = ({ children }: { children: React.ReactNode }) => (
@@ -239,6 +241,7 @@ export const Footer = () => {
                   </Link>
                 </li>
               ))}
+              <ReportABug />
             </ul>
 
             <p className={"text-sm text-gray-500 dark:text-gray-400"}>

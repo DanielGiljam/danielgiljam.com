@@ -4,7 +4,11 @@
 // The added config here will be used whenever a users loads a page in their browser.
 // https://docs.sentry.io/platforms/javascript/guides/nextjs/
 
-import { init, replayIntegration } from "@sentry/nextjs";
+import {
+  feedbackAsyncIntegration,
+  init,
+  replayIntegration,
+} from "@sentry/nextjs";
 
 init({
   dsn: "https://589c5e979d4e1ee7b6900a020d4c1702@o4509078880059392.ingest.de.sentry.io/4509078888448080",
@@ -12,7 +16,12 @@ init({
   enabled: process.env.NODE_ENV === "production",
 
   // Add optional integrations for additional features
-  integrations: [replayIntegration()],
+  integrations: [
+    replayIntegration(),
+    feedbackAsyncIntegration({
+      autoInject: false,
+    }),
+  ],
 
   // Define how likely traces are sampled. Adjust this value in production, or use tracesSampler for greater control.
   tracesSampleRate: 1,
