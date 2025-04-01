@@ -17,15 +17,16 @@ export const createInfrequentLogger = (logger: Log, frequency: number) => {
   return new Proxy(logger, {
     get(target, property) {
       if (levels.includes(property as never)) {
-        const currentTs = performance.now();
-        previousTs ??= currentTs;
-        if (currentTs - previousTs > frequencyInterval) {
-          previousTs = currentTs;
-          return (
-            target[property as never] as (...args: never) => unknown
-          ).bind(target);
-        }
-        return () => {};
+        return (...args: unknown[]) => {
+          const currentTs = performance.now();
+          previousTs ??= currentTs;
+          if (currentTs - previousTs > frequencyInterval) {
+            previousTs = currentTs;
+            return (
+              target[property as never] as (...args: unknown[]) => unknown
+            ).apply(target, args);
+          }
+        };
       }
       throw new Error(
         'Only level terminators available in "infrequent" loggers (https://adzejs.com/reference/terminators.html#level-terminators)',
