@@ -1,8 +1,9 @@
 import Image from "next/image";
 
-import { Logo } from "@/components/Logo";
 import { Logo3D } from "./Logo3D";
 import starfield from "./starfield.png";
+
+import { Logo } from "@/components/Logo";
 
 export const LandingPageHero = () => {
   return (
@@ -17,11 +18,11 @@ export const LandingPageHero = () => {
         }
       >
         <Logo
-          variant={"large"}
           aria-hidden={"true"}
           className={
             "invisible h-(--logo-lockup-logo-size) w-(--logo-lockup-logo-size)"
           }
+          variant={"large"}
         />
         <h1
           className={
@@ -33,9 +34,9 @@ export const LandingPageHero = () => {
       </div>
       <Logo3D />
       <Image
-        className={"-z-10 object-cover"}
         alt={"starfield"}
         aria-hidden={"true"}
+        className={"-z-10 object-cover"}
         sizes={"100vw"}
         src={starfield.src}
         fill

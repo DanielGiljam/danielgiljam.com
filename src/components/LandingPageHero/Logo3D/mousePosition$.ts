@@ -15,13 +15,13 @@ import { combineLatestWith, fromEvent, map, mergeWith, startWith } from "rxjs";
  * The observable only emits `undefined` once if mouse position
  * isn't supported (if it's a touch screen phone or tablet).
  */
-export const mousePosition$ = fromEvent(window, "resize").pipe(
-  startWith(undefined),
+export const mousePosition$ = fromEvent(globalThis, "resize").pipe(
+  startWith(),
   map(() => [window.innerWidth, window.innerHeight] as const),
   combineLatestWith(
     fromEvent<MouseEvent>(document, "mousemove").pipe(
       mergeWith(fromEvent<MouseEvent>(document, "mouseleave")),
-      startWith(undefined),
+      startWith(),
       map(
         (event) =>
           [
@@ -32,7 +32,7 @@ export const mousePosition$ = fromEvent(window, "resize").pipe(
       ),
     ),
     fromEvent(document, "scroll").pipe(
-      startWith(undefined),
+      startWith(),
       map(() => [window.scrollX, window.scrollY] as const),
     ),
   ),
@@ -43,7 +43,7 @@ export const mousePosition$ = fromEvent(window, "resize").pipe(
       [scrollX, scrollY],
     ]) => {
       if (mouseEventType === "mouseleave") {
-        return undefined;
+        return;
       }
       const x = ((scrollX + clientX) / innerWidth) * 2 - 1;
       const y = ((scrollY + clientY) / innerHeight) * 2 - 1;

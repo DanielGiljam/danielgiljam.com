@@ -1,4 +1,5 @@
-import Log, { levels } from "adze";
+import type Log from "adze";
+import { levels } from "adze";
 
 /**
  * Example use case: when you need to log things in rapidly firing
@@ -11,15 +12,15 @@ import Log, { levels } from "adze";
  * @returns An "infrequent" logger instance.
  */
 export const createInfrequentLogger = (logger: Log, frequency: number) => {
-  let prevTs: number;
+  let previousTs: number;
   return new Proxy(logger, {
-    get(target, prop, receiver) {
-      if (levels.includes(prop as never)) {
+    get(target, property, receiver) {
+      if (levels.includes(property as never)) {
         const currentTs = performance.now();
-        prevTs ??= currentTs;
-        if (currentTs - prevTs > frequency) {
-          prevTs = currentTs;
-          return Reflect.get(target, prop, receiver);
+        previousTs ??= currentTs;
+        if (currentTs - previousTs > frequency) {
+          previousTs = currentTs;
+          return Reflect.get(target, property, receiver);
         }
         return () => {};
       }

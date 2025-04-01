@@ -1,4 +1,4 @@
-import adze, { setup, levels, type Level } from "adze";
+import { type Level, levels, setup } from "adze";
 
 import { inRange } from "@/utils/numbers";
 
@@ -28,4 +28,4 @@ export const globalStore = setup({
   activeLevel: getLogLevel(),
 });
 
-export const globalLogger = adze;
+export { default as globalLogger } from "adze";

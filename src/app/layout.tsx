@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
+import { type Metadata } from "next";
 import { Geist, Geist_Mono, Roboto } from "next/font/google";
 
-import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
 
 import "./globals.css";
 
@@ -33,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang={"en"}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} dark antialiased`}
       >

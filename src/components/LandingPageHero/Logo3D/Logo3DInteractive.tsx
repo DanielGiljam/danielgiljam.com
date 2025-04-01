@@ -1,15 +1,16 @@
-import { ModelViewerElement } from "@google/model-viewer";
+import { type ModelViewerElement } from "@google/model-viewer";
 import React from "react";
+
+import { DeviceOrientationApiPermissionButton } from "./DeviceOrientationApiPermissionButton";
+import { deviceOrientation$ } from "./deviceOrientation$";
+import { mousePosition$ } from "./mousePosition$";
+import { useDeviceOrientationApiPermission } from "./useDeviceOrientationApiPermission";
 
 import { cn } from "@/cn";
 import { ModelViewer } from "@/components/ModelViewer";
 import { globalLogger } from "@/logger";
 import { degToRad } from "@/utils/angles";
 import { createInfrequentLogger } from "@/utils/createInfrequentLogger";
-import { DeviceOrientationApiPermissionButton } from "./DeviceOrientationApiPermissionButton";
-import { deviceOrientation$ } from "./deviceOrientation$";
-import { mousePosition$ } from "./mousePosition$";
-import { useDeviceOrientationApiPermission } from "./useDeviceOrientationApiPermission";
 
 const logger = globalLogger.label("Logo3DInteractive").seal();
 
@@ -102,16 +103,16 @@ export const Logo3DInteractive = ({
     <>
       <ModelViewer
         ref={ref}
+        cameraOrbit={"0deg 90deg 300%"}
         className={className}
-        src="/logo.glb"
-        scale="0.25 0.25 0.25"
-        cameraOrbit="0deg 90deg 300%"
-        maxCameraOrbit="Infinity 180deg 300%"
+        maxCameraOrbit={"Infinity 180deg 300%"}
+        scale={"0.25 0.25 0.25"}
+        src={"/logo.glb"}
+        ar
         onPosterDismissed={() => {
           setPosterDismissed(true);
           onPosterDismissed?.();
         }}
-        ar
       />
       {arAvailable != null && deviceOrientationApiPermission !== "granted" && (
         <DeviceOrientationApiPermissionButton

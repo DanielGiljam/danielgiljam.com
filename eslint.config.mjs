@@ -1,11 +1,12 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
+import path from "node:path";
+import url from "node:url";
+
 import { FlatCompat } from "@eslint/eslintrc";
 import prettier from "eslint-config-prettier";
 import unicorn from "eslint-plugin-unicorn";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const __filename = url.fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const compat = new FlatCompat({
   baseDirectory: __dirname,

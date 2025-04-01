@@ -10,7 +10,7 @@ export const useDeviceOrientationApiPermission = () => {
       localStorage.getItem("deviceOrientationApiPermission") !== "granted"
     ) {
       // it's Safari and permission hasn't already been granted
-      return undefined;
+      return;
     }
     // any other browser or permission has already been granted
     return "granted";

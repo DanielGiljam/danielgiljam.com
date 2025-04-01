@@ -4,16 +4,17 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import React from "react";
 
-import { globalLogger } from "@/logger";
 import poster from "./poster.png";
+
+import { globalLogger } from "@/logger";
 
 const logger = globalLogger.label("Logo3D").seal();
 
 const Logo3DInteractive = dynamic(
   () =>
-    import("./Logo3DInteractive").then((mod) => {
+    import("./Logo3DInteractive").then((module_) => {
       logger.timeNow.debug("Logo3DInteractive imported");
-      return mod.Logo3DInteractive;
+      return module_.Logo3DInteractive;
     }),
   { ssr: false },
 );
@@ -21,7 +22,11 @@ const Logo3DInteractive = dynamic(
 export const Logo3D = () => {
   const [posterDismissed, setPosterDismissed] = React.useState(false);
   return (
-    <div className="absolute inset-0 z-10 -mt-[calc(var(--logo-lockup-gap-size)+var(--logo-lockup-text-size)-var(--header-height))]">
+    <div
+      className={
+        "absolute inset-0 z-10 -mt-[calc(var(--logo-lockup-gap-size)+var(--logo-lockup-text-size)-var(--header-height))]"
+      }
+    >
       <Logo3DInteractive
         className={"h-full w-full"}
         onPosterDismissed={() => {
@@ -31,14 +36,14 @@ export const Logo3D = () => {
       />
       {!posterDismissed && (
         <Image
-          className={"-z-10 object-contain"}
           alt={""}
           aria-hidden={"true"}
+          className={"-z-10 object-contain"}
           sizes={"100vw"}
           src={poster.src}
-          onLoad={() => logger.timeNow.debug("poster loaded")}
           fill
           priority
+          onLoad={() => logger.timeNow.debug("poster loaded")}
         />
       )}
     </div>
