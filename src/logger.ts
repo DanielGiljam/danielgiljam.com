@@ -19,7 +19,7 @@ const getLogLevel = (): Level | number => {
   if (isLogLevel(process.env.LOGLEVEL)) {
     return process.env.LOGLEVEL;
   }
-  if (process.env.NODE_ENV === "development") {
+  if (process.env.NODE_ENV !== "production") {
     return "debug";
   }
   return "log";
