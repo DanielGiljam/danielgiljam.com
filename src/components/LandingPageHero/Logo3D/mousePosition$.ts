@@ -20,8 +20,8 @@ export const mousePosition$ = fromEvent(globalThis, "resize").pipe(
   startWith(undefined),
   map(() => [window.innerWidth, window.innerHeight] as const),
   combineLatestWith(
-    fromEvent<MouseEvent>(document, "mousemove").pipe(
-      mergeWith(fromEvent<MouseEvent>(document, "mouseleave")),
+    fromEvent<PointerEvent>(document, "pointermove").pipe(
+      mergeWith(fromEvent<PointerEvent>(document, "pointerleave")),
       // eslint-disable-next-line unicorn/no-useless-undefined
       startWith(undefined),
       map(
@@ -29,7 +29,8 @@ export const mousePosition$ = fromEvent(globalThis, "resize").pipe(
           [
             event?.clientX ?? window.innerWidth / 2,
             event?.clientY ?? window.innerHeight / 2,
-            event?.type ?? "mouseleave",
+            event?.type ?? "pointerleave",
+            event?.pointerType,
           ] as const,
       ),
     ),
@@ -42,10 +43,13 @@ export const mousePosition$ = fromEvent(globalThis, "resize").pipe(
   map(
     ([
       [innerWidth, innerHeight],
-      [clientX, clientY, mouseEventType],
+      [clientX, clientY, pointerEventType, pointerPointerType],
       [scrollX, scrollY],
     ]) => {
-      if (mouseEventType === "mouseleave") {
+      if (
+        pointerEventType === "pointerleave" ||
+        pointerPointerType !== "mouse"
+      ) {
         return;
       }
       const x = ((scrollX + clientX) / innerWidth) * 2 - 1;
