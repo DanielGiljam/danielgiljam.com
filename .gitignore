@@ -42,3 +42,6 @@ next-env.d.ts
 
 # contentlayer
 .contentlayer
+
+# self-signed certificates (when running next dev --experimental-https)
+certificates
