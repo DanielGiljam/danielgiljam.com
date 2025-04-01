@@ -16,12 +16,14 @@ import { combineLatestWith, fromEvent, map, mergeWith, startWith } from "rxjs";
  * isn't supported (if it's a touch screen phone or tablet).
  */
 export const mousePosition$ = fromEvent(globalThis, "resize").pipe(
-  startWith(),
+  // eslint-disable-next-line unicorn/no-useless-undefined
+  startWith(undefined),
   map(() => [window.innerWidth, window.innerHeight] as const),
   combineLatestWith(
     fromEvent<MouseEvent>(document, "mousemove").pipe(
       mergeWith(fromEvent<MouseEvent>(document, "mouseleave")),
-      startWith(),
+      // eslint-disable-next-line unicorn/no-useless-undefined
+      startWith(undefined),
       map(
         (event) =>
           [
@@ -32,7 +34,8 @@ export const mousePosition$ = fromEvent(globalThis, "resize").pipe(
       ),
     ),
     fromEvent(document, "scroll").pipe(
-      startWith(),
+      // eslint-disable-next-line unicorn/no-useless-undefined
+      startWith(undefined),
       map(() => [window.scrollX, window.scrollY] as const),
     ),
   ),
