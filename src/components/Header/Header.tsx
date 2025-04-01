@@ -6,7 +6,7 @@ import React from "react";
 import styles from "./Header.module.css";
 
 import { cn } from "@/cn";
-import { AnimatingHamburgerIcon } from "@/components/AnimatingHamburgerIcon";
+// import { AnimatingHamburgerIcon } from "@/components/AnimatingHamburgerIcon";
 import { Logo } from "@/components/Logo";
 
 const externalNavItems = [
@@ -32,20 +32,20 @@ const externalNavItems = [
   },
 ];
 
-const internalNavItems = [
-  {
-    label: "Blog",
-    href: "/blog",
-  },
-];
+// const internalNavItems = [
+//   {
+//     label: "Blog",
+//     href: "/blog",
+//   },
+// ];
 
 /**
  * Based on https://flowbite.com/blocks/marketing/header/#default-header-navigation.
  */
 export const Header = () => {
   const pathname = usePathname();
-  const id = React.useId();
-  const [open, setOpen] = React.useState(false);
+  // const id = React.useId();
+  // const [open, setOpen] = React.useState(false);
   return (
     <header className={"sticky inset-0 z-20"}>
       <nav
@@ -53,7 +53,7 @@ export const Header = () => {
           "absolute w-full bg-gradient-to-b from-black to-transparent px-4 py-2.5 backdrop-blur-md not-data-open:h-(--header-height) lg:h-(--header-height) lg:px-6",
           pathname === "/" && styles.nav,
         )}
-        data-open={open || undefined}
+        // data-open={open || undefined}
       >
         <div
           className={
@@ -90,7 +90,7 @@ export const Header = () => {
                 </li>
               ))}
             </ul>
-            <button
+            {/* <button
               aria-controls={id}
               aria-expanded={open ? "true" : "false"}
               className={
@@ -103,9 +103,9 @@ export const Header = () => {
                 {open ? "Close main menu" : "Open main menu"}
               </span>
               <AnimatingHamburgerIcon className={"h-8"} open={open} />
-            </button>
+            </button> */}
           </div>
-          <div
+          {/* <div
             className={cn(
               "w-full items-center justify-between lg:order-1 lg:flex lg:w-auto",
               !open && "hidden",
@@ -130,7 +130,7 @@ export const Header = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
         </div>
       </nav>
     </header>
