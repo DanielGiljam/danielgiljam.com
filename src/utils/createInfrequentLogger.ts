@@ -12,13 +12,14 @@ import { levels } from "adze";
  * @returns An "infrequent" logger instance.
  */
 export const createInfrequentLogger = (logger: Log, frequency: number) => {
+  const frequencyInterval = 1000 / frequency;
   let previousTs: number;
   return new Proxy(logger, {
     get(target, property) {
       if (levels.includes(property as never)) {
         const currentTs = performance.now();
         previousTs ??= currentTs;
-        if (currentTs - previousTs > frequency) {
+        if (currentTs - previousTs > frequencyInterval) {
           previousTs = currentTs;
           return (
             target[property as never] as (...args: never) => unknown
