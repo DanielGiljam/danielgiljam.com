@@ -48,3 +48,6 @@ certificates
 
 # eslint
 .eslintcache
+
+# sentry
+.env.sentry-build-plugin
