@@ -181,7 +181,7 @@ export const Footer = () => {
               }
             >
               {links.map(({ heading, links }) => (
-                <div key={heading} className={"mb-12"}>
+                <div key={heading} className={"mb-12 break-inside-avoid"}>
                   <h6
                     className={
                       "mb-4 text-sm font-semibold text-gray-900 uppercase dark:text-white"
