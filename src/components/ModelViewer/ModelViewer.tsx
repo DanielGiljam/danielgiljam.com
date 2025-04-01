@@ -6,7 +6,7 @@ import React from "react";
 
 import "@google/model-viewer";
 
-const ModelViewer = createComponent({
+export const ModelViewer = createComponent({
   tagName: "model-viewer",
   elementClass: ModelViewerElement,
   react: React,
@@ -37,16 +37,3 @@ const ModelViewer = createComponent({
     onDetachAnimation: "detach-animation",
   },
 });
-
-export const XRLogo = () => {
-  return (
-    <ModelViewer
-      className="h-full w-full"
-      src="/logo.glb"
-      camera-orbit="0deg 90deg 300%"
-      max-camera-orbit="Infinity 180deg 300%"
-      scale="0.25 0.25 0.25"
-      ar
-    />
-  );
-};

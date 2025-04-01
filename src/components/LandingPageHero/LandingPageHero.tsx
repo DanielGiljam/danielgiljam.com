@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import { Logo } from "@/components/Logo";
-import { XRLogoWrapper } from "./XRLogoWrapper";
+import { Logo3D } from "./Logo3D";
 import starfield from "./starfield.png";
 
 export const LandingPageHero = () => {
@@ -31,7 +31,7 @@ export const LandingPageHero = () => {
           Daniel Giljam
         </h1>
       </div>
-      <XRLogoWrapper />
+      <Logo3D />
       <Image
         className={"-z-10 object-cover"}
         alt={"starfield"}
