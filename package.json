@@ -24,6 +24,7 @@
   "dependencies": {
     "@google/model-viewer": "^4.0.0",
     "@lit/react": "^1.0.7",
+    "@vercel/analytics": "^1.5.0",
     "adze": "^2.2.1",
     "clsx": "^2.1.1",
     "contentlayer": "^0.3.4",
