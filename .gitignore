@@ -45,3 +45,6 @@ next-env.d.ts
 
 # self-signed certificates (when running next dev --experimental-https)
 certificates
+
+# eslint
+.eslintcache

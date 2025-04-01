@@ -11,7 +11,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "typecheck": "tsc",
+    "lint": "eslint --cache --max-warnings=0 .",
+    "fix": "eslint --cache --fix --max-warnings=0 .",
+    "prettier": "prettier --check .",
+    "format": "prettier --write .",
+    "tlp": "pnpm typecheck && pnpm lint && pnpm prettier",
+    "tff": "pnpm typecheck && pnpm fix && pnpm format",
+    "lp": "pnpm lint && pnpm prettier",
+    "ff": "pnpm fix && pnpm format"
   },
   "dependencies": {
     "@google/model-viewer": "^4.0.0",
