@@ -1,5 +1,9 @@
 import React from "react";
 
+import { globalLogger } from "@/logger";
+
+const logger = globalLogger.label("useDeviceOrientationApiPermission").seal();
+
 /**
  * On Safari, you must request permission from the user before being able to use the Device Orientation API.
  */
@@ -27,12 +31,16 @@ export const useDeviceOrientationApiPermission = () => {
             setState("granted");
             return;
           }
-          console.error(
+          logger.info(
             `Permission to listen to "deviceorientation" events not granted (state: ${state})`,
           );
         })
         .catch((error: unknown) => {
-          console.error(error);
+          logger.groupCollapsed.error(
+            'Failed to request permission to listen to "deviceorientation" events',
+          );
+          logger.error(error);
+          logger.groupEnd.log();
         });
       return;
     }
