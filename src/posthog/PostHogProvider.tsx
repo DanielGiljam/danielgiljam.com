@@ -50,6 +50,7 @@ export const PostHogProvider = ({
       api_host: "/ingest",
       ui_host: "https://eu.i.posthog.com",
       capture_pageview: false, // we capture pageviews manually
+      capture_pageleave: true, // enable pageleave capture
     });
   }, []);
   return (
