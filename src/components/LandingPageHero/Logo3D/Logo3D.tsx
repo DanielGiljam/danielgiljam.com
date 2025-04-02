@@ -24,7 +24,7 @@ export const Logo3D = () => {
   return (
     <div
       className={
-        "absolute inset-0 z-10 -mt-[calc(var(--logo-lockup-gap-size)+var(--logo-lockup-text-size)-var(--header-height))]"
+        "absolute inset-0 -mt-[calc(var(--logo-lockup-gap-size)+var(--logo-lockup-text-size)-var(--header-height))]"
       }
     >
       <Logo3DInteractive
@@ -38,7 +38,7 @@ export const Logo3D = () => {
         <Image
           alt={""}
           aria-hidden={"true"}
-          className={"-z-10 object-contain"}
+          className={"object-contain"}
           sizes={"100vw"}
           src={poster.src}
           fill
