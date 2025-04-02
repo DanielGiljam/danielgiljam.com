@@ -129,6 +129,7 @@ const eslintConfig = [
           },
           allowList: {
             generateStaticParams: true,
+            searchParams: true,
             urlSearchParams: true,
           },
         },

@@ -5,6 +5,7 @@ import { Geist, Geist_Mono, Roboto } from "next/font/google";
 
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { PostHogProvider } from "@/posthog/client";
 
 import "./globals.css";
 
@@ -39,9 +40,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} dark antialiased`}
       >
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <PostHogProvider>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </PostHogProvider>
         <Analytics />
         <SpeedInsights />
       </body>
