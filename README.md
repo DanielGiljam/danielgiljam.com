@@ -20,4 +20,4 @@ Pre-requisites: [Node.js](https://nodejs.org) and [PNPM](https://pnpm.io).
    pnpm dev
    ```
 
-4. Open in web browser ([http://localhost:3000/admin](http://localhost:3000/admin) by default)
+4. Open in web browser ([http://localhost:3000](http://localhost:3000) by default)
